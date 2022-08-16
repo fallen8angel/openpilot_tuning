@@ -952,4 +952,20 @@
         <translation>오픈파일럿이 가능한 핸들의 최대 조향 각도를 설정합니다. 각도를 90도 이상으로 설정하면 일부 차량에 오류가 발생할 수 있습니다.</translation>
     </message>
 </context>
+<context>
+    <name>OpenpilotView</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="524"/>
+        <source>Driving Camera</source>
+        <translation>드라이빙 카메라</translation>
+    </message>
+</context>
+<context>
+    <name>CLateralControlGroup</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="24"/>
+        <source>Lateral Control(Reboot)</source>
+        <translation>조향제어 방법(Reboot)</translation>
+    </message>
+</context>
 </TS>

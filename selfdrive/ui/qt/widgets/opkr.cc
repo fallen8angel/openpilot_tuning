@@ -21,7 +21,7 @@
 #include "selfdrive/ui/qt/widgets/opkr.h"
 
 
-CLateralControlGroup::CLateralControlGroup() : CGroupWidget( "Lateral Control(Reboot)" ) 
+CLateralControlGroup::CLateralControlGroup() : CGroupWidget( tr("Lateral Control(Reboot)") ) 
 {
   QString str_param = "LateralControlMethod";
 
@@ -521,7 +521,7 @@ GitHash::GitHash() : AbstractControl("Commit (Local/Remote)", "", "") {
   hlayout->addWidget(&remote_hash);
 }
 
-OpenpilotView::OpenpilotView() : AbstractControl("Driving Camera", "Preview the open pilot driving screen.", "") {
+OpenpilotView::OpenpilotView() : AbstractControl(tr("Driving Camera"), "Preview the open pilot driving screen.", "") {
 
   // setup widget
   hlayout->addStretch(1);
