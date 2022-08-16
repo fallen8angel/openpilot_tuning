@@ -3431,7 +3431,7 @@ void TireStiffnessFactor::refresh() {
 SteerMax::SteerMax() : AbstractControl("", "", "") {
 
   labell1.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
-  labell1.setText("SMBase: ");
+  labell1.setText(tr("SMBase: "));
   hlayout->addWidget(&labell1);
   labell.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labell.setStyleSheet("color: #e0e879");
@@ -3458,7 +3458,7 @@ SteerMax::SteerMax() : AbstractControl("", "", "") {
   hlayout->addWidget(&btnplusl);
 
   labelr1.setAlignment(Qt::AlignVCenter|Qt::AlignRight);
-  labelr1.setText("SMMax: ");
+  labelr1.setText(tr("SMMax: "));
   hlayout->addWidget(&labelr1);
   labelr.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labelr.setStyleSheet("color: #e0e879");
@@ -3561,7 +3561,7 @@ void SteerMax::refreshr() {
 SteerDeltaUp::SteerDeltaUp() : AbstractControl("", "", "") {
 
   labell1.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
-  labell1.setText("DtUpBase: ");
+  labell1.setText(tr("DtUpBase: "));
   hlayout->addWidget(&labell1);
   labell.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labell.setStyleSheet("color: #e0e879");
@@ -3588,7 +3588,7 @@ SteerDeltaUp::SteerDeltaUp() : AbstractControl("", "", "") {
   hlayout->addWidget(&btnplusl);
 
   labelr1.setAlignment(Qt::AlignVCenter|Qt::AlignRight);
-  labelr1.setText("DtUpMax: ");
+  labelr1.setText(tr("DtUpMax: "));
   hlayout->addWidget(&labelr1);
   labelr.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labelr.setStyleSheet("color: #e0e879");
@@ -3691,7 +3691,7 @@ void SteerDeltaUp::refreshr() {
 SteerDeltaDown::SteerDeltaDown() : AbstractControl("", "", "") {
 
   labell1.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
-  labell1.setText("DtDnBase: ");
+  labell1.setText(tr("DtDnBase: "));
   hlayout->addWidget(&labell1);
   labell.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labell.setStyleSheet("color: #e0e879");
@@ -3718,7 +3718,7 @@ SteerDeltaDown::SteerDeltaDown() : AbstractControl("", "", "") {
   hlayout->addWidget(&btnplusl);
 
   labelr1.setAlignment(Qt::AlignVCenter|Qt::AlignRight);
-  labelr1.setText("DtDnMax: ");
+  labelr1.setText(tr("DtDnMax: "));
   hlayout->addWidget(&labelr1);
   labelr.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labelr.setStyleSheet("color: #e0e879");
@@ -7523,7 +7523,7 @@ void MultipleLatSelect::refresh() {
 
 MultipleLateralSpeed::MultipleLateralSpeed() : AbstractControl("", "", "") {
   label1.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
-  label1.setText("SPD: ");
+  label1.setText(tr("SPD: "));
   hlayout->addWidget(&label1);
   labell.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labell.setStyleSheet("color: #e0e879");
@@ -7765,7 +7765,7 @@ void MultipleLateralSpeed::refreshr() {
 
 MultipleLateralAngle::MultipleLateralAngle() : AbstractControl("", "", "") {
   label1.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
-  label1.setText("ANG: ");
+  label1.setText(tr("ANG: "));
   hlayout->addWidget(&label1);
   labell.setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
   labell.setStyleSheet("color: #e0e879");
