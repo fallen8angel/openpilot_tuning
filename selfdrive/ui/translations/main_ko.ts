@@ -953,19 +953,2011 @@
     </message>
 </context>
 <context>
+    <name>CLateralControlGroup</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="24"/>
+        <source>Lateral Control(Reboot)</source>
+        <translation>조향제어 방법(Reboot)</translation>
+    </message>
+</context>
+<context>
+    <name>CLongControlGroup</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="149"/>
+        <source>Long Control</source>
+        <translation>롱 컨트롤</translation>
+    </message>
+</context>
+<context>
+    <name>CPandaGroup</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="170"/>
+        <source>Panda Values</source>
+        <translation>판다 값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="181"/>
+        <source>Change Panda Values</source>
+        <translation>판다 값 변경</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="181"/>
+        <source>RUN</source>
+        <translation>실행</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="183"/>
+        <source>Apply the changed panda value. Do you want to proceed? It automatically reboots.</source>
+        <translation>변경된 판다 값을 적용합니다. 계속하시겠습니까? 자동으로 재부팅됩니다.</translation>
+    </message>
+</context>
+<context>
+    <name>CGitGroup</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="191"/>
+        <source>Git Branch Change</source>
+        <translation>Git 브랜치 변경</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="198"/>
+        <source>Git Reset</source>
+        <translation>Git 리셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="200"/>
+        <source>Apply the latest commitment details of Remote Git after forced initialization of local changes. Do you want to proceed?</source>
+        <translation>로컬 변경 내용을 강제로 초기화한 후 원격 Git의 최신 커밋을 적용합니다. 계속하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="207"/>
+        <source>GitPull Restore</source>
+        <translation>GitPull 복구</translation>
+    </message>
+</context>
+<context>
+    <name>CUtilWidget</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="226"/>
+        <source>Util Program</source>
+        <translation>유틸리티 프로그램</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="233"/>
+        <source>Panda Flashing(OLD)</source>
+        <translation>판다 플래싱 (OLD)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="235"/>
+        <source>Panda&apos;s green LED blinks quickly during panda flashing. Never turn off or disconnect the device arbitrarily. Do you want to proceed?</source>
+        <translation>판다가 번쩍이는 동안 판다의 녹색 LED가 빠르게 깜박입니다. 장치를 임의로 끄거나 분리하지 마십시오. 계속하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="241"/>
+        <source>Panda Flashing(NEW)</source>
+        <translation>판다 플래싱 (NEW)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="249"/>
+        <source>Open Android Settings</source>
+        <translation>안드로이드 설정 열기</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="256"/>
+        <source>SoftKey RUN/SET</source>
+        <translation>소프트키 실행/설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="262"/>
+        <source>RUN Mixplorer</source>
+        <translation>믹스플로러 실행</translation>
+    </message>
+</context>
+<context>
+    <name>CPresetWidget</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="276"/>
+        <source>Parameter Preset</source>
+        <translation>파라미터 프리셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="293"/>
+        <source>Load Preset1</source>
+        <translation>프리셋1 로드</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="297"/>
+        <source>Do you want to load Preset1?</source>
+        <translation>프리셋1을 로드하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="302"/>
+        <source>Save Preset1</source>
+        <translation>프리셋1 저장</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="306"/>
+        <source>Do you want to save Preset1?</source>
+        <translation>프리셋1에 저장하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="315"/>
+        <source>Load Preset2</source>
+        <translation>프리셋2 로드</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="319"/>
+        <source>Do you want to load Preset2?</source>
+        <translation>프리셋2를 로드하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="324"/>
+        <source>Save Preset2</source>
+        <translation>프리셋2 저장</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="328"/>
+        <source>Do you want to save Preset2?</source>
+        <translation>프리셋2에 저장하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="333"/>
+        <source>Parameters Init</source>
+        <translation>파라미터 초기화</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="335"/>
+        <source>Initialize parameters. Changes in the EON menu are changed to the initial set value. Do you want to proceed?</source>
+        <translation>매개 변수를 초기화합니다. 메뉴의 변경 사항이 초기 설정 값으로 변경됩니다. 계속하시겠습니까?</translation>
+    </message>
+</context>
+<context>
+    <name>SwitchOpenpilot</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="358"/>
+        <source>Change Repo/Branch</source>
+        <translation>리포지토리/브랜치 변경</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="358"/>
+        <source>Change to another open pilot code. You can change it by entering ID/repository/branch.</source>
+        <translation>다른 오픈파일럿 코드로 변경합니다. 아이디/리포지토리/브랜치를 입력하여 변경하실 수 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="360"/>
+        <source>CHANGE</source>
+        <translation>변경</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="361"/>
+        <source>First: Input the Git ID.</source>
+        <translation>첫번째: Git ID를 입력하세요.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="364"/>
+        <source>Second: Input the repository.</source>
+        <translation>두번째: 리포지토리를 입력하세요.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="367"/>
+        <source>Last: Input the branch name.</source>
+        <translation>마지막: 브랜치 이름을 입력하세요.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="371"/>
+        <source>This will download the branch and takes a little time.</source>
+        <translation>이렇게 하면 브랜치가 다운로드되고 시간이 조금 걸립니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="371"/>
+        <source>Branch: </source>
+        <translation>브랜치: </translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="373"/>
+        <source>DONE</source>
+        <translation>완료</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="442"/>
+        <source> The ID does not exist. Return to the input window, press the cancel button, and try again from the beginning.</source>
+        <translation> ID가 존재하지 않습니다. 입력 창으로 돌아가서 취소 버튼을 누른 다음 처음부터 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="446"/>
+        <source>The requested time has exceeded.</source>
+        <translation>요청한 시간이 초과되었습니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="448"/>
+        <source>The ID does not exist. Return to the input window, press the cancel button, and try again from the beginning.</source>
+        <translation>ID가 존재하지 않습니다. 입력 창으로 돌아가서 취소 버튼을 누른 다음 처음부터 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="465"/>
+        <source> The repository does not exist. Return to the input window, press the cancel button, and try again from the beginning.</source>
+        <translation> 리포지토리가 없습니다. 입력 창으로 돌아가서 취소 버튼을 누른 다음 처음부터 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="471"/>
+        <source>The Repository does not exist. Return to the input window, press the cancel button, and try again from the beginning.</source>
+        <translation>리포지토리가 없습니다. 입력 창으로 돌아가서 취소 버튼을 누른 다음 처음부터 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="488"/>
+        <source> The branch does not exist. Press the cancel button and try again from the beginning.</source>
+        <translation> 브랜치가 존재하지 않습니다. 취소 버튼을 누르고 처음부터 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="494"/>
+        <source>The Branch does not exist. Return to the input window, press the cancel button, and try again from the beginning.</source>
+        <translation>브랜치가 존재하지 않습니다. 입력 창으로 돌아가서 취소 버튼을 누른 다음 처음부터 다시 시도하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>GitHash</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="504"/>
+        <source>Commit (Local/Remote)</source>
+        <translation>커밋 (로컬/원격)</translation>
+    </message>
+</context>
+<context>
     <name>OpenpilotView</name>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="524"/>
         <source>Driving Camera</source>
         <translation>드라이빙 카메라</translation>
     </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="524"/>
+        <source>Preview the open pilot driving screen.</source>
+        <translation>오픈파일럿 주행 화면을 미리 봅니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="581"/>
+        <source>UNVIEW</source>
+        <translation>보기해제</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="584"/>
+        <source>PREVIEW</source>
+        <translation>미리보기</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="585"/>
+        <source>CALVIEW</source>
+        <translation>캘리보기</translation>
+    </message>
 </context>
 <context>
-    <name>CLateralControlGroup</name>
+    <name>CarSelectCombo</name>
     <message>
-        <location filename="../qt/widgets/opkr.cc" line="24"/>
-        <source>Lateral Control(Reboot)</source>
-        <translation>조향제어 방법(Reboot)</translation>
+        <location filename="../qt/widgets/opkr.cc" line="611"/>
+        <source>Select Your Car</source>
+        <translation>차량을 선택하세요</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="637"/>
+        <source>Do you want to unset?</source>
+        <translation>설정을 해제하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="655"/>
+        <source>Press OK to set your car as</source>
+        <translation>[확인]을 눌러 차량을 다음과 같이 설정합니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="676"/>
+        <source>UNSET</source>
+        <translation>해제</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="679"/>
+        <source>SET</source>
+        <translation>설정</translation>
+    </message>
+</context>
+<context>
+    <name>BranchSelectCombo</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="711"/>
+        <source>RELOAD</source>
+        <translation>새로고침</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="726"/>
+        <source>Now will checkout the branch</source>
+        <translation>이제 브랜치를 체크아웃합니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="726"/>
+        <source>The device will be rebooted if completed.</source>
+        <translation>완료되면 장치가 재부팅됩니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="742"/>
+        <source>Your branch is already</source>
+        <translation>이미 해당 브랜치입니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="779"/>
+        <source>Select Branch you want to change</source>
+        <translation>변경할 브랜치 선택</translation>
+    </message>
+</context>
+<context>
+    <name>TimeZoneSelectCombo</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="807"/>
+        <source>Select Your TimeZone</source>
+        <translation>표준 시간대 선택</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="833"/>
+        <source>Do you want to set default?</source>
+        <translation>기본값으로 설정하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="851"/>
+        <source>Press OK to set your timezone as</source>
+        <translation>시간대를 다음과 같이 설정하려면 [확인]을 누르십시오</translation>
+    </message>
+</context>
+<context>
+    <name>AutoShutdown</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="874"/>
+        <source>EON AutoShutdown</source>
+        <translation>장치 자동 종료</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="874"/>
+        <source>EON is automatically turned off after the set time while the engine is turned off (offload) after driving (onload).</source>
+        <translation>주행(온로드) 후 시동종료 시 설정된 시간이 지나면 장치가 자동으로 꺼집니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="932"/>
+        <source>AlwaysOn</source>
+        <translation>항상켜기</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="934"/>
+        <source>RightOff</source>
+        <translation>바로끄기</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="936"/>
+        <source>30sec</source>
+        <translation>30초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="938"/>
+        <source>1min</source>
+        <translation>1분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="940"/>
+        <source>3mins</source>
+        <translation>3분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="942"/>
+        <source>5mins</source>
+        <translation>5분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="944"/>
+        <source>10mins</source>
+        <translation>10분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="946"/>
+        <source>30mins</source>
+        <translation>30분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="948"/>
+        <source>1hour</source>
+        <translation>1시간</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="950"/>
+        <source>3hours</source>
+        <translation>3시간</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="952"/>
+        <source>5hours</source>
+        <translation>5시간</translation>
+    </message>
+</context>
+<context>
+    <name>ForceShutdown</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="956"/>
+        <source>EON ForceShutdown</source>
+        <translation>장치 강제 종료</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="956"/>
+        <source>If the screen is turned off while off-road without driving (on-road X), force it to turn off after a certain period of time. When a touch event occurs, the off time is reset.</source>
+        <translation>장치 오프로드 시 화면이 꺼진 경우 일정 시간이 지나면 강제로 꺼지도록 하십시오. 터치 이벤트가 발생하면 종료 시간이 초기화됩니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1014"/>
+        <source>AlwaysOn</source>
+        <translation>항상켜기</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1016"/>
+        <source>1min</source>
+        <translation>1분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1018"/>
+        <source>3mins</source>
+        <translation>3분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1020"/>
+        <source>5mins</source>
+        <translation>5분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1022"/>
+        <source>10mins</source>
+        <translation>10분</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1024"/>
+        <source>30mins</source>
+        <translation>30분</translation>
+    </message>
+</context>
+<context>
+    <name>VolumeControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1029"/>
+        <source>EON Volume Control(%)</source>
+        <translation>장치 볼륨 조절(%)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1029"/>
+        <source>Adjust the volume of EON. Android Default/Manual Settings</source>
+        <translation>장치 볼륨을 조절합니다. 안드로이드 기본/수동 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1092"/>
+        <source>Default</source>
+        <translation>기본값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1094"/>
+        <source>Mute</source>
+        <translation>음소거</translation>
+    </message>
+</context>
+<context>
+    <name>BrightnessControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1111"/>
+        <source>EON Brightness Control(%)</source>
+        <translation>장치 밝기 조절(%)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1111"/>
+        <source>Manually adjust the brightness of the EON screen.</source>
+        <translation>장치 화면의 밝기를 수동으로 조정합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1171"/>
+        <source>Auto</source>
+        <translation>자동</translation>
+    </message>
+</context>
+<context>
+    <name>BrightnessOffControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1177"/>
+        <source>Brightness at SCR Off(%)</source>
+        <translation>화면꺼짐 시 밝기(%)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1177"/>
+        <source>When using the EON screen off function, the brightness is reduced according to the automatic brightness ratio.</source>
+        <translation>장치 화면 끄기 기능 사용 시, 자동 밝기 비율에 따라 밝기가 감소됩니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1237"/>
+        <source>Dark</source>
+        <translation>끄기</translation>
+    </message>
+</context>
+<context>
+    <name>AutoScreenOff</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1243"/>
+        <source>EON SCR Off Timer</source>
+        <translation>장치 화면 끄기 타이머</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1243"/>
+        <source>Turn off the EON screen or reduce brightness to protect the screen after driving starts. It automatically brightens or turns on when a touch or event occurs.</source>
+        <translation>주행 시작 후 화면을 보호하기 위해 장치 화면을 끄거나 밝기를 줄이십시오. 터치나 이벤트가 발생하면 자동으로 밝아지거나 켜집니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1307"/>
+        <source>15secs</source>
+        <translation>15초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1309"/>
+        <source>30secs</source>
+        <translation>30초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1311"/>
+        <source>min(s)</source>
+        <translation>분</translation>
+    </message>
+</context>
+<context>
+    <name>ChargingMin</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1315"/>
+        <source>BAT MinCharging Value</source>
+        <translation>배터리 최소 충전 값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1315"/>
+        <source>Sets the minimum battery charge value.</source>
+        <translation>최소 배터리 충전 값을 설정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>ChargingMax</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1374"/>
+        <source>BAT MaxCharging Value</source>
+        <translation>배터리 최대 충전 값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1374"/>
+        <source>Sets the maximum battery charge value.</source>
+        <translation>최대 배터리 충전 값을 설정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>RecordCount</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1433"/>
+        <source>Number of Recorded Files</source>
+        <translation>녹화 파일 개수</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1433"/>
+        <source>Sets the maximum number of recording files. Check file size and max recording count to not exceed your storage.</source>
+        <translation>최대 녹화 파일 수를 설정합니다. 파일 크기 및 최대 기록 수가 저장소를 초과하지 않도록 확인하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>RecordQuality</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1492"/>
+        <source>Recording Quality</source>
+        <translation>녹화 품질</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1492"/>
+        <source>Set the recording quality. Low/Mid/high definition/high definition/ultra-high definition.</source>
+        <translation>녹화 품질을 설정합니다. 저/중/고화질/초고화질.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1550"/>
+        <source>Low</source>
+        <translation>저화질</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1552"/>
+        <source>Mid</source>
+        <translation>중화질</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1554"/>
+        <source>High</source>
+        <translation>고화질</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1556"/>
+        <source>U-High</source>
+        <translation>초고화질</translation>
+    </message>
+</context>
+<context>
+    <name>MonitoringMode</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1560"/>
+        <source>Driver Monitoring Mode</source>
+        <translation>운전자 모니터링 모드</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1560"/>
+        <source>Set the monitoring mode. In the case of preference/prevention of sleepiness and sleepiness prevention, you can send a warning message faster by adjusting (lowering) the threshold value below.</source>
+        <translation>모니터링 모드를 설정합니다. 졸음 예방을 선호하는 경우 아래 임계값을 조정(낮춤)하여 경고 메시지를 더 빠르게 보낼 수 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1620"/>
+        <source>UnSleep</source>
+        <translation>졸음방지</translation>
+    </message>
+</context>
+<context>
+    <name>MonitorEyesThreshold</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1624"/>
+        <source>E2E EYE Threshold</source>
+        <translation>E2E EYE 임계값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1624"/>
+        <source>Adjust the reference value for the eye detection range. Set the reference value for the value that suits you. When you close your eyes, you should set it lower than the distracted Eyes value. Default: 0.75</source>
+        <translation>눈 감지 범위의 기준 값을 조정합니다. 자신에게 맞는 값의 기준 값을 설정합니다. 눈을 감을 때는 Distracted Eyes 값보다 낮게 설정해야 합니다. 기본값: 0.75</translation>
+    </message>
+</context>
+<context>
+    <name>NormalEyesThreshold</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1687"/>
+        <source>Normal EYE Threshold</source>
+        <translation>일반 EYE 임계값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1687"/>
+        <source>Adjust the eye recognition reference value. Lower the value when the recognition rate is low. Default: 0.5</source>
+        <translation>눈 인식 기준 값을 조정합니다. 인식률이 낮을 때 값을 낮춥니다. 기본값: 0.5</translation>
+    </message>
+</context>
+<context>
+    <name>BlinkThreshold</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1750"/>
+        <source>Blink Threshold</source>
+        <translation>눈깜박임 임계값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1750"/>
+        <source>Adjust the recognition value for the degree of blinking. When you close your eyes, check BlinkProb and lower the value. Default: 0.5</source>
+        <translation>깜박이는 정도에 대한 인식 값을 조정합니다. 눈을 감은 상태에서 BlinkProb를 확인하고 해당값보다 낮춥니다. 기본값: 0.5</translation>
+    </message>
+</context>
+<context>
+    <name>CruisemodeSelInit</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1814"/>
+        <source>Cruise Start Mode</source>
+        <translation>크루즈 시작 모드</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1814"/>
+        <source>Set the cruise start mode. OP mode/dist+curve/dist only/curve only/one-way 1 lane/safetycam deceleration Only. op mode:no button speed control, dist+curve:use button speed control in the inter-vehicle distance and curve section, dist only:curve only:curve one-way speed only, one-way speed control</source>
+        <translation>크루즈 시작 모드를 설정합니다. OP 기본/차간+커브/차간거리/커브/편도1차/안전구간 감속. OP 기본: 버튼 속도 제어 없음, 차간+커브: 차간 거리와 커브 구간에서 버튼 속도 제어 사용, 차간거리:차간거리에만 버튼속도제어 사용, 커브:커브 구간에서만 버튼속도 제어 사용, 편도1차: 차간+커브 버튼속도제어 및 차량을 우측으로 치우치게 설정, 안전구간 감속: 안전구간에서만 버튼 속도조절 사용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1872"/>
+        <source>OP Stock</source>
+        <translation>OP 기본</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1874"/>
+        <source>Dist+Curv</source>
+        <translation>차간+커브</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1876"/>
+        <source>DistOnly</source>
+        <translation>차간거리</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1878"/>
+        <source>CurvOnly</source>
+        <translation>커브</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1880"/>
+        <source>OneWay</source>
+        <translation>편도1차선</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1882"/>
+        <source>CamOnly</source>
+        <translation>안전구간</translation>
+    </message>
+</context>
+<context>
+    <name>LaneChangeSpeed</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1886"/>
+        <source>LaneChange On/Off/Spd</source>
+        <translation>차선변경속도(On/Off/속도)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1886"/>
+        <source>On/Off lane change(push (-) btn till Off value) and set the lane changeable speed. This value can be kph or mph.</source>
+        <translation>차선 변경 가능 속도를 설정합니다. 이 값은 kph 또는 mph 입니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1944"/>
+        <source>Off</source>
+        <translation>끄기</translation>
+    </message>
+</context>
+<context>
+    <name>LaneChangeDelay</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1950"/>
+        <source>LaneChange Delay</source>
+        <translation>차선 변경 지연시간</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="1950"/>
+        <source>Set the delay time after turn signal operation before lane change.</source>
+        <translation>차선 변경 전 방향 지시등 작동 후 지연 시간을 설정합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2008"/>
+        <source>Nudge</source>
+        <translation>넛지사용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2010"/>
+        <source>RightNow</source>
+        <translation>바로변경</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2012"/>
+        <source>0.5sec</source>
+        <translation>0.5초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2014"/>
+        <source>1sec</source>
+        <translation>1초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2016"/>
+        <source>1.5sec</source>
+        <translation>1.5초</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2018"/>
+        <source>2secs</source>
+        <translation>2초</translation>
+    </message>
+</context>
+<context>
+    <name>LeftCurvOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2022"/>
+        <source>LeftCurv Offset</source>
+        <translation>좌측 커브 오프셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2022"/>
+        <source>Adjust the position of the vehicle in the curve section. (-value: move the car to the left, +value: move the car to the right)</source>
+        <translation>커브 구간에서 차량의 위치를 조정합니다(-값: 차량을 왼쪽으로 이동, +값: 차량을 오른쪽으로 이동)</translation>
+    </message>
+</context>
+<context>
+    <name>RightCurvOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2081"/>
+        <source>RightCurv Offset</source>
+        <translation>우측 커브 오프셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2081"/>
+        <source>Adjust the position of the vehicle in the curve section. (-value: move the car to the left, +value: move the car to the right)</source>
+        <translation>커브 구간에서 차량의 위치를 조정합니다(-값: 차량을 왼쪽으로 이동, +값: 차량을 오른쪽으로 이동)</translation>
+    </message>
+</context>
+<context>
+    <name>SteerAngleCorrection</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2141"/>
+        <source>Str Angle Adjust</source>
+        <translation>스티어링 각도 보정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2141"/>
+        <source>On the straight path, adjust the SteerAngle zero to zero the current steering angle. ex) Set it to 0.5 degrees Celsius for a straight line, and -0.5 degrees Celsius for -0.5 degrees Celsius.</source>
+        <translation>직선 경로에서 스티어링 각도를 조정하여 현재 스티어링 각도를 0으로 설정합니다. ex) 직선 주행시 스티어링 각도가 0.5이면 0.5로 설정하여 0으로 맞추고, -0.5도이면 -0.5도로 설정하여 0으로 맞춥니다. 앵글센서와 스티어링 각도 차이가 많이 나는 경우는 조향각 센서를 초기화 하는게 바람직 합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2204"/>
+        <source>SpeedLimit Offset</source>
+        <translation>안전속도 오프셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2204"/>
+        <source>During safetycam deceleration, it decelerates by compensating for the difference between GPS speed and real speed.</source>
+        <translation>안전구간 감속 중 GPS 속도와 실제 속도 사이의 차이를 보상하여 감속합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>RESChoice</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2295"/>
+        <source>AutoRES Option</source>
+        <translation>자동RES 옵션</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2295"/>
+        <source>Sets the auto RES option. 1. Adjust the temporary cruise speed, 2. Adjust the set speed itself according to the presence or absence of a preceding car. 3. Adjust the cruise speed if there is a preceding car, and adjust the set speed if there is no preceding car. Please note that the automatic RES may not work well depending on the conditions.</source>
+        <translation>자동 RES 옵션을 설정합니다. 1. 크루즈속도조정: 설정속도는 그대로 두고 크루즈 속도만 조금 높게 재 설정합니다., 2. 설정속도조정: 설정(MAX)속도를 현재속도로 조정하여 설정합니다., 3. 자동(선행차): 선행차가 있으면 크루즈속도를 조정하고, 선행차가 없으면 설정속도를 조정합니다. 조건에 따라 자동 RES가 잘 작동하지 않을 수 있으니 참고해주세요.(ex. 커브 구간에서는 동작하지 않음).</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2353"/>
+        <source>CruiseSet</source>
+        <translation>크루즈속도조정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2355"/>
+        <source>MaxSpeedSet</source>
+        <translation>설정속도조정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2357"/>
+        <source>AUTO(LeadCar)</source>
+        <translation>자동(선행차)</translation>
+    </message>
+</context>
+<context>
+    <name>AutoResCondition</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2361"/>
+        <source>AutoRES Condition</source>
+        <translation>자동RES 조건</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2361"/>
+        <source>Sets the automatic RES condition. When the brake is released/operated when the accelerator pedal is operated.</source>
+        <translation>자동RES 조건을 설정합니다. 가속페달조작시 / 브레이크해제시.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2419"/>
+        <source>RelBrake</source>
+        <translation>브레이크해제시</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2421"/>
+        <source>OnGas</source>
+        <translation>가속페달조작시</translation>
+    </message>
+</context>
+<context>
+    <name>AutoResLimitTime</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2425"/>
+        <source>AutoRES Allow(sec)</source>
+        <translation>자동RES 허용시간(초)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2425"/>
+        <source>Adjust the automatic RES allowance time. Automatic RES operates only within the set time after the cruise is released.</source>
+        <translation>자동RES 허용 시간을 설정합니다. 자동RES는 크루즈가 해제된 후 설정된 시간 내에만 작동합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2481"/>
+        <source>NoLimit</source>
+        <translation>제한 없음</translation>
+    </message>
+</context>
+<context>
+    <name>AutoEnableSpeed</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2489"/>
+        <source>Auto Engage Spd(kph)</source>
+        <translation>자동 인게이지 속도(kph)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2489"/>
+        <source>Set the automatic engage speed.</source>
+        <translation>자동 인게이지 속도를 설정합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2545"/>
+        <source>atDGear</source>
+        <translation>D기어시</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2547"/>
+        <source>atDepart</source>
+        <translation>출발시</translation>
+    </message>
+</context>
+<context>
+    <name>CamDecelDistAdd</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2555"/>
+        <source>SafetyCamDist Adj(%)</source>
+        <translation>안전구간 감속거리 조정(%)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2555"/>
+        <source>Reduce or increase the deceleration start distance during deceleration of the safety section (+ value: deceleration start from a long distance, -value: deceleration start at a short distance) = interpolation value X interpolation value X reduction/increase ratio according to difference between current speed and cam speed.</source>
+        <translation>안전구간 감속시 감속시작거리를 줄이거나 늘립니다(+값: 원거리부터 감속시작, -값: 단거리부터 감속시작) = 보간값 X 보간값 X 현재속도와 캠속도의 차이에 따른 감속/감속비.</translation>
+    </message>
+</context>
+<context>
+    <name>MaxSteer</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2620"/>
+        <source>MAX_STEER</source>
+        <translation>MAX_STEER</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2620"/>
+        <source>Modify the Panda MAX_STEEER value. Press the Run button below to apply.</source>
+        <translation>판다 MAX_STEER 값을 수정합니다. 아래 실행 버튼을 눌러 적용하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>MaxRTDelta</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2679"/>
+        <source>RT_DELTA</source>
+        <translation>RT_DELTA</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2679"/>
+        <source>Modify the panda RT_DELTA value. Press the Run button below to apply. It might be 7(DeltaDown)X16=112?</source>
+        <translation>판다 RT_DELTA 값을 수정합니다. 아래 실행 버튼을 눌러 적용하십시오. 7(DeltaDown)X16=112?</translation>
+    </message>
+</context>
+<context>
+    <name>MaxRateUp</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2738"/>
+        <source>MAX_RATE_UP</source>
+        <translation>MAX_RATE_UP</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2738"/>
+        <source>Modify the Panda MAX_RATE_UP value. Press the Run button below to apply.</source>
+        <translation>판다 MAX_RATE_UP 값을 수정합니다. 아래 실행 버튼을 눌러 적용하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>MaxRateDown</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2797"/>
+        <source>MAX_RATE_DOWN</source>
+        <translation>MAX_RATE_DOWN</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2797"/>
+        <source>Modify the Panda MAX_RATE_DOWN value. Press the Run button below to apply.</source>
+        <translation>판다 MAX_RATE_DOWN 값을 수정합니다. 아래 실행 버튼을 눌러 적용하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>CameraOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2857"/>
+        <source>CameraOffset</source>
+        <translation>카메라 오프셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2857"/>
+        <source>Sets the CameraOffset value. (+value:Move Left, -value:Move Right)</source>
+        <translation>CameraOffset 값을 설정합니다. (+값:왼쪽으로 이동, -값:오른쪽으로 이동)</translation>
+    </message>
+</context>
+<context>
+    <name>PathOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2920"/>
+        <source>PathOffset</source>
+        <translation>Path 오프셋</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2920"/>
+        <source>Sets the PathOffset value. (+value:Move left, -value:Move right)</source>
+        <translation>PathOffset 값을 설정합니다. (+값:왼쪽으로 이동, -value:오른쪽으로 이동)</translation>
+    </message>
+</context>
+<context>
+    <name>SRBaseControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2983"/>
+        <source>SteerRatio</source>
+        <translation>SteerRatio</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="2983"/>
+        <source>Sets the SteerRatio default value.</source>
+        <translation>SteerRatio 기본값을 설정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SRMaxControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3081"/>
+        <source>SteerRatioMax</source>
+        <translation>SteerRatio최대값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3081"/>
+        <source>Sets the SteerRatio maximum value.</source>
+        <translation>SteerRatio 최대값을 설정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SteerActuatorDelay</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3179"/>
+        <source>SteerActuatorDelay</source>
+        <translation>SteerActuatorDelay</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3179"/>
+        <source>Adjust the SteerActuatorDelay value.</source>
+        <translation>SteerActuatorDelay 값을 조정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SteerRateCost</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3242"/>
+        <source>SteerRateCost</source>
+        <translation>SteerRateCost</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3242"/>
+        <source>Adjust the SteerRateCost value.</source>
+        <translation>SteerRateCost 값을 조정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SteerLimitTimer</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3305"/>
+        <source>SteerLimitTimer</source>
+        <translation>SteerLimitTimer</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3305"/>
+        <source>Adjust the SteerLimitTimer value.</source>
+        <translation>SteerLimitTimer 값을 조정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>TireStiffnessFactor</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3368"/>
+        <source>TireStiffnessFactor</source>
+        <translation>TireStiffnessFactor</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3368"/>
+        <source>Adjust the TireStiffnessFactor value.</source>
+        <translation>TireStiffnessFactor 값을 조정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>SteerMax</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3512"/>
+        <source>The value cannot exceed SteerMax</source>
+        <translation>값은 SteerMax를 초과할 수 없습니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3529"/>
+        <source>The value cannot be less than SteerMaxBase</source>
+        <translation>값은 SteerMaxBase보다 작을 수 없습니다</translation>
+    </message>
+</context>
+<context>
+    <name>SteerDeltaUp</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3642"/>
+        <source>The value cannot exceed maximum DeltaUp value</source>
+        <translation>값은 최대 DeltaUp값을 초과할 수 없습니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3659"/>
+        <source>The value cannot be less than DeltaUp default value</source>
+        <translation>값은 DeltaUp 기본값보다 작을 수 없습니다</translation>
+    </message>
+</context>
+<context>
+    <name>SteerDeltaDown</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3772"/>
+        <source>The value cannot exceed maximum DeltaDown value</source>
+        <translation>값은 최대 DeltaDown 값을 초과할 수 없습니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3789"/>
+        <source>The value cannot be less than DeltaDown default value</source>
+        <translation>값은 DeltaDown 기본값보다 작을 수 없습니다</translation>
+    </message>
+</context>
+<context>
+    <name>SteerThreshold</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3821"/>
+        <source>SteerThreshold</source>
+        <translation>SteerThreshold</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3821"/>
+        <source>Adjust the SteerThreshold value.</source>
+        <translation>SteerThreshold를 조정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>LateralControl</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3881"/>
+        <source>LatControl(Reboot)</source>
+        <translation>조향제어방법(Reboot)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3881"/>
+        <source>Set the steering control method(PID/INDI/LQR/TORQUE). Reboot Required.</source>
+        <translation>조향제어방법(PID/INDI/LQR/TORQUE)을 설정합니다. 재부팅이 필요합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>PidKp</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3952"/>
+        <source>Kp</source>
+        <translation>Kp</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="3952"/>
+        <source>Adjust Kp</source>
+        <translation>Kp 조정</translation>
+    </message>
+</context>
+<context>
+    <name>PidKi</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4015"/>
+        <source>Ki</source>
+        <translation>Ki</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4015"/>
+        <source>Adjust Ki</source>
+        <translation>Ki 조정</translation>
+    </message>
+</context>
+<context>
+    <name>PidKd</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4078"/>
+        <source>Kd</source>
+        <translation>Kd</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4078"/>
+        <source>Adjust Kd</source>
+        <translation>Kd 조정</translation>
+    </message>
+</context>
+<context>
+    <name>PidKf</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4141"/>
+        <source>Kf</source>
+        <translation>Kf</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4141"/>
+        <source>Adjust Kf</source>
+        <translation>Kf 조정</translation>
+    </message>
+</context>
+<context>
+    <name>OuterLoopGain</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4204"/>
+        <source>OuterLoopGain</source>
+        <translation>OuterLoopGain</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4204"/>
+        <source>Adjust OuterLoopGain</source>
+        <translation>OuterLoopGain 조정</translation>
+    </message>
+</context>
+<context>
+    <name>InnerLoopGain</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4267"/>
+        <source>InnerLoopGain</source>
+        <translation>InnerLoopGain</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4267"/>
+        <source>Adjust InnerLoopGain</source>
+        <translation>InnerLoopGain 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TimeConstant</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4330"/>
+        <source>TimeConstant</source>
+        <translation>TimeConstant</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4330"/>
+        <source>Adjust TimeConstant</source>
+        <translation>TimeConstant 조정</translation>
+    </message>
+</context>
+<context>
+    <name>ActuatorEffectiveness</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4393"/>
+        <source>ActuatorEffectiveness</source>
+        <translation>ActuatorEffectiveness</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4393"/>
+        <source>Adjust ActuatorEffectiveness</source>
+        <translation>ActuatorEffectiveness 조정</translation>
+    </message>
+</context>
+<context>
+    <name>Scale</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4456"/>
+        <source>Scale</source>
+        <translation>Scale</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4456"/>
+        <source>Adjust Scale</source>
+        <translation>Scale 조정</translation>
+    </message>
+</context>
+<context>
+    <name>LqrKi</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4515"/>
+        <source>LqrKi</source>
+        <translation>LqrKi</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4515"/>
+        <source>Adjust ki</source>
+        <translation>Ki 조정</translation>
+    </message>
+</context>
+<context>
+    <name>DcGain</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4578"/>
+        <source>DcGain</source>
+        <translation>DcGain</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4578"/>
+        <source>Adjust DcGain</source>
+        <translation>DcGain 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueKp</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4641"/>
+        <source>Kp</source>
+        <translation>Kp</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4641"/>
+        <source>Adjust Kp</source>
+        <translation>Kp 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueKf</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4709"/>
+        <source>Kf</source>
+        <translation>Kf</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4709"/>
+        <source>Adjust Kf</source>
+        <translation>Kf 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueKi</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4777"/>
+        <source>Ki</source>
+        <translation>Ki</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4777"/>
+        <source>Adjust Ki</source>
+        <translation>Ki 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueFriction</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4845"/>
+        <source>Friction</source>
+        <translation>Friction</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4845"/>
+        <source>Adjust Friction</source>
+        <translation>Friction 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueMaxLatAccel</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4908"/>
+        <source>MaxLatAccel</source>
+        <translation>MaxLatAccel</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4908"/>
+        <source>Adjust MaxLatAccel</source>
+        <translation>MaxLatAccel 조정</translation>
+    </message>
+</context>
+<context>
+    <name>TorqueAngDeadZone</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4971"/>
+        <source>AngleDeadZone</source>
+        <translation>AngleDeadZone</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="4971"/>
+        <source>Adjust TorqueAngDeadZone</source>
+        <translation>TorqueAngDeadZone 조정</translation>
+    </message>
+</context>
+<context>
+    <name>CruiseGapTR</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5034"/>
+        <source>CruiseGap</source>
+        <translation>크루즈갭</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5034"/>
+        <source>Adjust the inter-vehicle distance (TR) according to the cruise gap. TR refers to the time in seconds of collision with the car in front, and the larger it becomes, the farther it is from the car in front.</source>
+        <translation>크루즈 갭에 따라 차량 간 거리(TR)를 조정하십시오. TR은 앞차와 충돌한 시간(초 단위)을 말하며, 크기가 커질수록 앞차와의 거리가 멀어진다.</translation>
+    </message>
+</context>
+<context>
+    <name>DynamicTRGap</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5252"/>
+        <source>Use DynamicTR</source>
+        <translation>다이나믹TR 사용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5252"/>
+        <source>Use DynamicTR and assign it to the corresponding gap and adjust TR by speed below.</source>
+        <translation>다이나믹TR 사용 및 해당 갭에 할당하고 아래 속도로 TR을 조절합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5310"/>
+        <source>UnUse</source>
+        <translation>사용안함</translation>
+    </message>
+</context>
+<context>
+    <name>LCTimingFactorUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5517"/>
+        <source>LaneChange Time (km/h: value)</source>
+        <translation>차선변경 시간(km/h: 값)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5517"/>
+        <source>When changing lanes, adjust the timing of lane change for each speed. If you want a quick lane change, increase the value and lower the value if you want a slow lane change.</source>
+        <translation>차선 변경 시 속도별로 차선 변경 타이밍을 조정한다. 빠른 차선 변경을 원하는 경우 값을 늘리고 느린 차선 변경을 원하는 경우 값을 낮춥니다.</translation>
+    </message>
+</context>
+<context>
+    <name>LiveSRPercent</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5599"/>
+        <source>LiveSR Adjust(%)</source>
+        <translation>라이브SR 조정(%)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5599"/>
+        <source>When using LiveSR, the learned value is arbitrarily adjusted (%) and used. -Value:Lower from learned value, +Value:Lower from learned value</source>
+        <translation>LiveSR을 사용할 때 학습된 값을 임의로 조정(%)하여 사용합니다. -값:학습된 값에서 더 낮은 값, + 값:학습된 값에서 더 낮음</translation>
+    </message>
+</context>
+<context>
+    <name>VCurvSpeedUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5663"/>
+        <source>VisionCurvDecel([CV] [TargetSpeed])</source>
+        <translation>비전커브감속([CV] [목표속도])</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5663"/>
+        <source>Adjust the curve deceleration speed according to the model speed(curvature). (interpolation and list value)</source>
+        <translation>모델 속도(곡률)에 따라 곡선 감속 속도를 조정합니다. (기준 및 목록 값)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5698"/>
+        <source>Set CV values with comma</source>
+        <translation>CV 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5698"/>
+        <source>Values are kph or mph</source>
+        <translation>값은 kph 또는 mph입니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5708"/>
+        <source>Set TS values with comma</source>
+        <translation>TS 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5719"/>
+        <source>Index count does not match. Check your input again.</source>
+        <translation>인덱스 수가 일치하지 않습니다. 입력한 내용을 다시 확인하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5730"/>
+        <source>EDIT</source>
+        <translation>변경</translation>
+    </message>
+</context>
+<context>
+    <name>OCurvSpeedUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5733"/>
+        <source>OSMCurvDecel([TSL] [TargetSpeed])</source>
+        <translation>OSM커브감속([TSL] [목표속도])</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5733"/>
+        <source>Adjust the curve deceleration speed according to turn speed limit of OSM. (interpolation value)</source>
+        <translation>OSM의 커브 속도 제한에 따라 커브 감속 속도를 조절합니다.(보간값)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5768"/>
+        <source>Set TSL values with comma</source>
+        <translation>TSL 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5768"/>
+        <source>Valus are TSL</source>
+        <translation>값은 TSL입니다</translation>
+    </message>
+</context>
+<context>
+    <name>GetOffAlert</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5803"/>
+        <source>EON Detach Alert Sound</source>
+        <translation>장치 분리 알림음</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5803"/>
+        <source>Device alert you a alarm to detach the EON when ignition off.(NO Alert/KOR/ENG)</source>
+        <translation>시동이 꺼지면 장치를 분리하도록 알림을 보냅니다.(없음/한국어/영어)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5861"/>
+        <source>None</source>
+        <translation>없음</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5863"/>
+        <source>KOR</source>
+        <translation>한국어</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5865"/>
+        <source>ENG</source>
+        <translation>영어</translation>
+    </message>
+</context>
+<context>
+    <name>OPKRNaviSelect</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5869"/>
+        <source>Navigation Select</source>
+        <translation>네비게이션 선택</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5869"/>
+        <source>Select the navigation you want to use.(Mappy/Waze/None)</source>
+        <translation>사용할 네비게이션을 선택합니다.(맵피/웨이즈/없음)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5927"/>
+        <source>Mappy</source>
+        <translation>맵피</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5929"/>
+        <source>Waze</source>
+        <translation>웨이즈</translation>
+    </message>
+</context>
+<context>
+    <name>OPKRServerSelect</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5935"/>
+        <source>API Server</source>
+        <translation>서버 API</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5935"/>
+        <source>Set API server to Retropilot/Comma/User&apos;s</source>
+        <translation>API 서버를 Retropilot/Comma/User&apos;s로 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5966"/>
+        <source>Retropilot</source>
+        <translation>레트로파일럿</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5967"/>
+        <source>Comma</source>
+        <translation>Comma</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5968"/>
+        <source>User&apos;s</source>
+        <translation>사용자</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5976"/>
+        <source>You&apos;ve chosen comma server. Your uploads might be ignored if you upload your data. I highly recommend you should reset the device to avoid be banned.</source>
+        <translation>콤마 서버를 선택했습니다. 데이터를 업로드하면 업로드가 무시될 수 있습니다. 금지되지 않도록 장치를 재설정할 것을 강력히 권장합니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5981"/>
+        <source>You&apos;ve chosen own server. Please set your api host at the menu below.</source>
+        <translation>자체 서버를 선택했습니다. 아래 메뉴에서 api 호스트를 설정하십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>OPKRServerAPI</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6067"/>
+        <source>User&apos;s API</source>
+        <translation>사용자 API</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6067"/>
+        <source>Set Your API server URL or IP</source>
+        <translation>API 서버 URL 또는 IP 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6084"/>
+        <source>Input Your API(url or ip):</source>
+        <translation>API(url 또는 ip) 입력:</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6086"/>
+        <source>Your Input is</source>
+        <translation>입력 내용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6086"/>
+        <source>Press OK to apply and reboot</source>
+        <translation>적용하려면 [확인]을 누르십시오</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6097"/>
+        <source>Do you want to unset? the API server gets back to Retropilot server and Device will be rebooted now.</source>
+        <translation>설정을 해제하시겠습니까? API 서버가 Retropilot 서버로 돌아가면 장치가 지금 재부팅됩니다.</translation>
+    </message>
+</context>
+<context>
+    <name>OPKRMapboxStyle</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6120"/>
+        <source>Mapbox Style</source>
+        <translation>맵박스 스타일</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6120"/>
+        <source>Set the Mapbox sytle to Comma/OPKR/User&apos;s</source>
+        <translation>Mapbox 시스템을 콤마/OPKR/사용자로 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6152"/>
+        <source>OPKR</source>
+        <translation>OPKR</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6165"/>
+        <source>You&apos;ve chosen own style. Please set your mapbox style to the param (MapboxStyleCustom). File location: /data/params/d/MapboxStyleCustom</source>
+        <translation>자신만의 스타일을 선택하셨습니다. 맵박스 스타일을 파라미터 (MapboxStyleCustom)으로 설정하십시오. 파일 위치: /data/params/d/MapboxStyleCustom</translation>
+    </message>
+</context>
+<context>
+    <name>RESCountatStandstill</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6251"/>
+        <source>RES Count at Standstill</source>
+        <translation>정지상태에서 RES 횟수</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6251"/>
+        <source>Comma Default: 25, this value cannot be acceptable at some cars. So adjust the number if you want to. It generates RES CAN messages when leadcar is moving. If departure is failed, increase the number. In opposite, if CAN error occurs, decrease the number.</source>
+        <translation>콤마 기본값: 25, 일부 차량에서는 이 값을 사용할 수 없습니다. 그러니 당신이 원한다면 숫자를 조정하세요. 리드카가 움직일 때 RESCAN 메시지를 생성합니다. 출발에 실패하면 횟수를 늘립니다. 반대로 CAN 오류가 발생하면 숫자를 줄이십시오.</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitSignType</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6310"/>
+        <source>SafetyCam SignType</source>
+        <translation>안전구간 표지판 유형</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6310"/>
+        <source>Select SafetyCam SignType (Circle/Rectangle)</source>
+        <translation>안전구간표지판 타입(원/사각) 선택</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6368"/>
+        <source>Circle</source>
+        <translation>원형</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6370"/>
+        <source>Rectangle</source>
+        <translation>사각</translation>
+    </message>
+</context>
+<context>
+    <name>RadarLongHelperOption</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6374"/>
+        <source>Long Mode</source>
+        <translation>롱 모드</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6374"/>
+        <source>Vision Only, Vision+Radar, Radar Only, OPKR Custom</source>
+        <translation>비전만, 비전+레이더, 레이더만, OPKR 사용자 지정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6432"/>
+        <source>Vision Only</source>
+        <translation>비전전용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6434"/>
+        <source>Vision+Radar</source>
+        <translation>비전+레이더</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6436"/>
+        <source>Radar Only</source>
+        <translation>레이더전용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6438"/>
+        <source>OPKR Custom</source>
+        <translation>OPKR믹스</translation>
+    </message>
+</context>
+<context>
+    <name>CurvDecelSelect</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6442"/>
+        <source>Curv Decel Option</source>
+        <translation>곡선 감속 옵션</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6442"/>
+        <source>None, Vision+OSM, Vision Only, OSM Only</source>
+        <translation>없음, 비전+OSM, 비전만, OSM만</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6502"/>
+        <source>Vision+OSM</source>
+        <translation>비전+OSM</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6506"/>
+        <source>OSM Only</source>
+        <translation>OSM전용</translation>
+    </message>
+</context>
+<context>
+    <name>AutoRESDelay</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6510"/>
+        <source>AutoRES Delay(sec)</source>
+        <translation>자동RES 지연(초)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6510"/>
+        <source>Give delay time to trigger for AutoRES while driving.</source>
+        <translation>주행 중 AutoRES를 실행할 지연 시간을 줍니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6566"/>
+        <source>No Delay</source>
+        <translation>지연없음</translation>
+    </message>
+</context>
+<context>
+    <name>OSMCustomSpeedLimitUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6574"/>
+        <source>OSMCustomSpeedLimit([SL] [TargetSpeed])</source>
+        <translation>OSM임의속도제한([SL] [목표속도])</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6574"/>
+        <source>Set the offset speed according to speed limit of OSM. (interpolation value)</source>
+        <translation>OSM의 제한속도에 따라 오프셋 속도를 설정한다.(보간값)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6609"/>
+        <source>Set SL values with comma</source>
+        <translation>SL 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6619"/>
+        <source>Set CTSL values with comma</source>
+        <translation>CTSL 값 설정</translation>
+    </message>
+</context>
+<context>
+    <name>DesiredCurvatureLimit</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6644"/>
+        <source>DesiredCurvatureLimit</source>
+        <translation>DesiredCurvatureLimit</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6644"/>
+        <source>Adjust DisiredCurvatureLimit, Default is 0.05(DT_MDL), For HKG, maybe 0.2 is preferred from user&apos;s experience. If the steering digs into inside on intersection, upper the value. And then it will limit your scope of steering angle. In case of opposite situation, lower the value. this is multiplier of desired curvature rate not real limit value.</source>
+        <translation>DisiredCurvatureLimit 조정, 기본값은 0.05(DT_MDL)입니다. HKG의 경우 사용자의 경험에서 0.2가 선호됩니다. 스티어링이 교차로에서 안쪽으로 파고들면 값을 높인다. 그러면 스티어링 각도의 범위가 제한될 것입니다. 반대의 경우 값을 낮춥니다. 이것은 실제 한계값이 아닌 원하는 곡률 속도의 승수입니다.</translation>
+    </message>
+</context>
+<context>
+    <name>DynamicTRUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6742"/>
+        <source>DynamicTR: [Speed] [TRs]</source>
+        <translation>다이나믹TR: [속도] [TRs]</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6742"/>
+        <source>Set TR of each speeds. (Mid range is interpolation values)</source>
+        <translation>각 속도의 TR을 설정합니다. (중간 범위는 보간값입니다.)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6777"/>
+        <source>Set Speed values with comma</source>
+        <translation>속도 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6787"/>
+        <source>Set TR values with comma</source>
+        <translation>TR 값 설정</translation>
+    </message>
+</context>
+<context>
+    <name>LaneWidth</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6812"/>
+        <source>Set LaneWidth</source>
+        <translation>차선 폭 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6812"/>
+        <source>Set LaneWidth (default:3.7)</source>
+        <translation>차선 폭 설정(기본값: 3.7)</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLaneWidthUD</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6875"/>
+        <source>Speed LaneWidth: [Spd(m/s)] [LaneWidth]</source>
+        <translation>스피드 차선폭: [속도(m/s)] [차선폭]</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6875"/>
+        <source>Set LaneWidths by speed. Speed is m/s values not kph or mph. (Mid range is interpolation values)</source>
+        <translation>속도를 기준으로 차선 폭을 설정합니다. 속도는 kph 또는 mph가 아닌 m/s 값입니다(중간 범위는 보간 값입니다)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6910"/>
+        <source>Set Speed(m/s) values with comma</source>
+        <translation>속도(m/s) 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6910"/>
+        <source>Values are m/s unit.</source>
+        <translation>값은 m/s 단위입니다.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6920"/>
+        <source>Set LW(m) values with comma</source>
+        <translation>LW(m) 값 설정</translation>
+    </message>
+</context>
+<context>
+    <name>OPKRTopTextView</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6945"/>
+        <source>Bottom Text View</source>
+        <translation>하단 텍스트 뷰</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6945"/>
+        <source>Date/Time/OSM Street Name</source>
+        <translation>날짜/시간/OSM거리명</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7006"/>
+        <source>Date+Time</source>
+        <translation>날짜+시간</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7009"/>
+        <source>Date</source>
+        <translation>날짜</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7012"/>
+        <source>Time</source>
+        <translation>시간</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7015"/>
+        <source>Date+Time+OSM</source>
+        <translation>날짜+시간+OSM</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7018"/>
+        <source>Date+OSM</source>
+        <translation>날짜+OSM</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7021"/>
+        <source>Time+OSM</source>
+        <translation>시간+OSM</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7024"/>
+        <source>OSM</source>
+        <translation>OSM</translation>
+    </message>
+</context>
+<context>
+    <name>OPKREdgeOffset</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7029"/>
+        <source>+ value to move car to left, - value to move car to right on each lane.</source>
+        <translation>+값은차를 왼쪽으로 이동, -값은 오른쪽으로 이동.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7032"/>
+        <source>LeftEdge: </source>
+        <translation>좌측엣지: </translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7059"/>
+        <source>RightEdge: </source>
+        <translation>우측엣지: </translation>
+    </message>
+</context>
+<context>
+    <name>ToAvoidLKASFault</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7159"/>
+        <source>MaxAngle: </source>
+        <translation>MaxAngle: </translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7186"/>
+        <source>MaxFrame: </source>
+        <translation>MaxFrame: </translation>
+    </message>
+</context>
+<context>
+    <name>RPMAnimatedMaxValue</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7354"/>
+        <source>AnimatedRPM Max</source>
+        <translation>RPM애니메이션 최대값</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7354"/>
+        <source>Set Max RPM for animated rpm value.</source>
+        <translation>최대 RPM 애니메이션 값을 설정합니다.</translation>
+    </message>
+</context>
+<context>
+    <name>UserSpecificFeature</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7413"/>
+        <source>FeatureNumber</source>
+        <translation>사용자기능번호</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7413"/>
+        <source>User Specific Feature</source>
+        <translation>사용자 기능 번호</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7435"/>
+        <source>User Specific Features</source>
+        <translation>사용자 기능</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7435"/>
+        <source>Put your number you know.</source>
+        <translation>사전에 알고 있는 번호를 적으세요.</translation>
+    </message>
+</context>
+<context>
+    <name>MultipleLatSelect</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7450"/>
+        <source>Multi LateralControl</source>
+        <translation>멀티 조향 제어</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="7450"/>
+        <source>Multiple Lateral Tune by Speed/Angle.</source>
+        <translation>속도/각도별 멀티 조향 튜닝.</translation>
+    </message>
+</context>
+<context>
+    <name>StoppingDist</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="8008"/>
+        <source>Stopping Distance(m)</source>
+        <translation>정지 거리(m)</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="8008"/>
+        <source>Car starts to stop under the value.</source>
+        <translation>차간거리가 해당값 이하로 되면 차가 멈추기 시작한다.</translation>
+    </message>
+</context>
+<context>
+    <name>VariableCruiseLevel</name>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="8071"/>
+        <source>Button Spamming Level</source>
+        <translation>크루즈 가감속 레벨</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="8071"/>
+        <source>High values make early stopping and starting, but might be not comfortable. Low values are the opposite.</source>
+        <translation>값이 높으면 가감속 수치 변화가 빨라 이른 감속이 가능할수도 있지만 사용에 불편할 수 있습니다. 낮은 값은 그 반대입니다.</translation>
     </message>
 </context>
 </TS>
