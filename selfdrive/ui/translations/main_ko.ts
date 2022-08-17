@@ -261,12 +261,15 @@
     </message>
 </context>
 <context>
-    <name>QRWidget</name>
+    <name>PairingQRWidget</name>
     <message>
         <location filename="../qt/widgets/prime.cc" line="42"/>
         <source>Error getting serial: contact support</source>
         <translation>시리얼번호 조회 실패: 고객센터에 문의하세요</translation>
     </message>
+</context>
+<context>
+    <name>SetupWidget</name>
     <message>
         <location filename="../qt/widgets/prime.cc" line="199"/>
         <source>Show QR Code</source>
@@ -465,7 +468,7 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="135"/>
         <source>Preview the driver facing camera to ensure that driver monitoring has good visibility. (vehicle must be off)</source>
-        <translation>운전자 모니터링 상태를 확인하기 위해 운전자를 향한 카메라를 미리보기 합니다. (차량연결은 해제되어있어야 합니다)</translation>
+        <translation>운전자 모니터링 상태를 확인하기 위해 운전자를 향한 카메라를 미리보기 합니다. (차량연결은 해제되어 있어야 합니다)</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="140"/>
@@ -722,7 +725,7 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="373"/>
         <source>failed to fetch update</source>
-        <translation>업데이트를 가져올수없습니다</translation>
+        <translation>업데이트를 가져올 수 없습니다</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="374"/>
@@ -804,7 +807,7 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="49"/>
         <source>Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31 mph (50 km/h).</source>
-        <translation>차량이 50km/h(31mph) 이상의 속도로 주행하는 동안 방향 지시등이 활성화되지 않은 상태에서 감지된 차선 위를 주행할 경우 차선이탈 경고를 사용합니다.</translation>
+        <translation>차량이 50km/h(31mph) 이상의 속도로 주행하는 동안 방향 지시등이 활성화되지 않은 상태에서 차선이탈이 발생한 경우 경고를 보냅니다.</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="54"/>
@@ -869,12 +872,12 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="93"/>
         <source>Enable Driving Log Record</source>
-        <translation>주행 로그(카바나) 기록 사용</translation>
+        <translation>주행 로그 기록 사용</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="94"/>
         <source>Record the driving log locally for data analysis. Only loggers are activated and not uploaded to the server.</source>
-        <translation>데이터 분석을 위해 주행 기록을 로컬에 저장하세요. 로거만 활성화되고 서버에 업로드되지 않습니다.</translation>
+        <translation>데이터 분석을 위해 주행 기록(카바나)을 로컬에 저장하세요. 로거만 활성화되고 서버에 업로드되지 않습니다. 이 기능은 리소스를 많이 사용하므로 데이터 분석외 평시에는 해당기능을 끄는것을 권장합니다.</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="99"/>
@@ -884,7 +887,7 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="100"/>
         <source>Activate the upload process to transmit system logs and other driving data to the server. Upload it only off-road.</source>
-        <translation>업로드 프로세스를 활성화하여 시스템 로그 및 기타 주행 데이터를 서버로 전송합니다. 오프로드 상태에서만 업로드합니다.</translation>
+        <translation>업로드 프로세스를 활성화하여 시스템 로그 및 기타 주행 데이터를 서버로 전송합니다. 오프로드 상태에서만 업로드합니다. 이 기능은 리소스를 많이 사용하므로 데이터 분석외 평시에는 해당기능을 끄는것을 권장합니다.</translation>
     </message>
     <message>
         <location filename="../qt/offroad/settings.cc" line="110"/>
@@ -894,7 +897,7 @@
     <message>
         <location filename="../qt/offroad/settings.cc" line="111"/>
         <source>openpilot will disable the car&apos;s radar and will take over control of gas and brakes. Warning: this disables AEB!</source>
-        <translation>openpilot은 차량&apos;의 레이더를 비활성화하고 가속페달과 브레이크의 제어에 관여합니다. 경고: AEB가 비활성화 됩니다!</translation>
+        <translation>오픈파일럿은 차량의 레이더를 비활성화하고 가속과 브레이크의 제어에 관여합니다. 경고: AEB가 비활성화 됩니다!</translation>
     </message>
 </context>
 <context>
@@ -1004,7 +1007,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="191"/>
         <source>Git Branch Change</source>
-        <translation>Git 브랜치 변경</translation>
+        <translation>Git 리포지토리/브랜치</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="198"/>
@@ -1135,7 +1138,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="335"/>
         <source>Initialize parameters. Changes in the EON menu are changed to the initial set value. Do you want to proceed?</source>
-        <translation>매개 변수를 초기화합니다. 메뉴의 변경 사항이 초기 설정 값으로 변경됩니다. 계속하시겠습니까?</translation>
+        <translation>파라미터를 초기화합니다. 메뉴의 변경 사항이 초기 설정 값으로 변경됩니다. 계속하시겠습니까?</translation>
     </message>
 </context>
 <context>
@@ -1148,7 +1151,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="358"/>
         <source>Change to another open pilot code. You can change it by entering ID/repository/branch.</source>
-        <translation>다른 오픈파일럿 코드로 변경합니다. 아이디/리포지토리/브랜치를 입력하여 변경하실 수 있습니다.</translation>
+        <translation>다른 오픈파일럿 코드로 변경합니다. 아이디/리포지토리/브랜치를 입력하여 변경할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="360"/>
@@ -1409,7 +1412,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="956"/>
         <source>If the screen is turned off while off-road without driving (on-road X), force it to turn off after a certain period of time. When a touch event occurs, the off time is reset.</source>
-        <translation>장치 오프로드 시 화면이 꺼진 경우 일정 시간이 지나면 강제로 꺼지도록 하십시오. 터치 이벤트가 발생하면 종료 시간이 초기화됩니다.</translation>
+        <translation>장치 오프로드 시 화면이 꺼진 경우 일정 시간이 지나면 강제로 꺼지도록 합니다. 터치 이벤트가 발생하면 종료 시간이 초기화됩니다.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1014"/>
@@ -1514,6 +1517,11 @@
         <translation>주행 시작 후 화면을 보호하기 위해 장치 화면을 끄거나 밝기를 줄이십시오. 터치나 이벤트가 발생하면 자동으로 밝아지거나 켜집니다.</translation>
     </message>
     <message>
+        <location filename="../qt/widgets/opkr.cc" line="1305"/>
+        <source>AlwaysOn</source>
+        <translation>항상켜기</translation>
+    </message>
+    <message>
         <location filename="../qt/widgets/opkr.cc" line="1307"/>
         <source>15secs</source>
         <translation>15초</translation>
@@ -1578,7 +1586,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1492"/>
         <source>Set the recording quality. Low/Mid/high definition/high definition/ultra-high definition.</source>
-        <translation>녹화 품질을 설정합니다. 저/중/고화질/초고화질.</translation>
+        <translation>녹화 품질을 설정합니다. 저화질/중화질/고화질/초고화질.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1550"/>
@@ -1611,7 +1619,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1560"/>
         <source>Set the monitoring mode. In the case of preference/prevention of sleepiness and sleepiness prevention, you can send a warning message faster by adjusting (lowering) the threshold value below.</source>
-        <translation>모니터링 모드를 설정합니다. 졸음 예방을 선호하는 경우 아래 임계값을 조정(낮춤)하여 경고 메시지를 더 빠르게 보낼 수 있습니다.</translation>
+        <translation>모니터링 모드를 설정합니다. 졸음 예방을 선호하는 경우 아래 임계값을 조정(낮춤)하여 경고 메시지를 더 빠르게 보낼 수 있습니다. 화면에서 모니터링 아이콘을 클릭하여 기본모드/졸음방지 모드를 바꿀 수 있습니다. 기본배경:기본모드, 초록배경:졸음방지모드, 졸음방지 모드에서 3회 이상 경고가 울릴경우, 졸음을 쫓기 위한 음악(베타파)이 자동 재생됩니다. 재생은 음악이 끝나면 자동으로 종료되며, 화면을 터치해서도 끌 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1618"/>
@@ -1634,7 +1642,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="1624"/>
         <source>Adjust the reference value for the eye detection range. Set the reference value for the value that suits you. When you close your eyes, you should set it lower than the distracted Eyes value. Default: 0.75</source>
-        <translation>눈 감지 범위의 기준 값을 조정합니다. 자신에게 맞는 값의 기준 값을 설정합니다. 눈을 감을 때는 Distracted Eyes 값보다 낮게 설정해야 합니다. 기본값: 0.75</translation>
+        <translation>눈 감지 범위의 기준 값을 조정합니다. 자신에게 맞는 값의 기준 값을 설정합니다. 눈을 감을 때 Distracted Eyes 값보다 낮게 설정해야 합니다. 기본값: 0.75</translation>
     </message>
 </context>
 <context>
@@ -1803,7 +1811,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="2141"/>
         <source>On the straight path, adjust the SteerAngle zero to zero the current steering angle. ex) Set it to 0.5 degrees Celsius for a straight line, and -0.5 degrees Celsius for -0.5 degrees Celsius.</source>
-        <translation>직선 경로에서 스티어링 각도를 조정하여 현재 스티어링 각도를 0으로 설정합니다. ex) 직선 주행시 스티어링 각도가 0.5이면 0.5로 설정하여 0으로 맞추고, -0.5도이면 -0.5도로 설정하여 0으로 맞춥니다. 앵글센서와 스티어링 각도 차이가 많이 나는 경우는 조향각 센서를 초기화 하는게 바람직 합니다.</translation>
+        <translation>직선 경로에서 스티어링 각도를 조정하여 현재 스티어링 각도를 0으로 설정합니다. ex) 직선 주행시 스티어링 각도가 0.5이면 0.5로 설정하여 0으로 맞추고, -0.5도이면 -0.5도로 설정하여 0으로 맞춥니다. 앵글센서와 스티어링 각도 차이가 많이 나는 경우는 조향각 센서를 초기화 하는게 바람직합니다.</translation>
     </message>
 </context>
 <context>
@@ -1829,7 +1837,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="2295"/>
         <source>Sets the auto RES option. 1. Adjust the temporary cruise speed, 2. Adjust the set speed itself according to the presence or absence of a preceding car. 3. Adjust the cruise speed if there is a preceding car, and adjust the set speed if there is no preceding car. Please note that the automatic RES may not work well depending on the conditions.</source>
-        <translation>자동 RES 옵션을 설정합니다. 1. 크루즈속도조정: 설정속도는 그대로 두고 크루즈 속도만 조금 높게 재 설정합니다., 2. 설정속도조정: 설정(MAX)속도를 현재속도로 조정하여 설정합니다., 3. 자동(선행차): 선행차가 있으면 크루즈속도를 조정하고, 선행차가 없으면 설정속도를 조정합니다. 조건에 따라 자동 RES가 잘 작동하지 않을 수 있으니 참고해주세요.(ex. 곡률이 큰 커브 구간에서는 안전상 동작하지 않게 하였음).</translation>
+        <translation>자동 RES 옵션을 설정합니다. 1. 크루즈속도조정: 설정속도는 그대로 두고 크루즈 속도만 현재속도보다 조금 높게 재 설정합니다., 2. 설정속도조정: 설정(MAX)속도를 현재속도로 조정하여 설정합니다., 3. 자동(선행차): 선행차가 있으면 크루즈속도를 조정하고, 선행차가 없으면 설정속도를 조정합니다. 조건에 따라 자동 RES가 잘 작동하지 않을 수 있으니 참고해주세요.(ex. 곡률이 큰 커브 구간에서는 안전상 동작하지 않게 하였음).</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="2353"/>
@@ -2411,7 +2419,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5034"/>
         <source>Adjust the inter-vehicle distance (TR) according to the cruise gap. TR refers to the time in seconds of collision with the car in front, and the larger it becomes, the farther it is from the car in front.</source>
-        <translation>크루즈 갭에 따라 차량 간 거리(TR)를 조정하십시오. TR은 앞차와 충돌한 시간(초 단위)을 말하며, 크기가 커질수록 앞차와의 거리가 멀어진다.</translation>
+        <translation>크루즈 갭에 따라 차량 간 거리(TR)를 조정하십시오. TR은 앞차와 충돌한 시간(초 단위)을 말하며, 크기가 커질수록 앞차와의 거리가 멀어집니다.</translation>
     </message>
 </context>
 <context>
@@ -2442,7 +2450,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5517"/>
         <source>When changing lanes, adjust the timing of lane change for each speed. If you want a quick lane change, increase the value and lower the value if you want a slow lane change.</source>
-        <translation>차선 변경 시 속도별로 차선 변경 타이밍을 조정한다. 빠른 차선 변경을 원하는 경우 값을 늘리고 느린 차선 변경을 원하는 경우 값을 낮춥니다.</translation>
+        <translation>차선 변경 시 속도별로 차선 변경 타이밍을 조정합니다. 빠른 차선 변경을 원하는 경우 값을 늘리고 느린 차선 변경을 원하는 경우 값을 낮춥니다.</translation>
     </message>
 </context>
 <context>
@@ -2481,12 +2489,12 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5698"/>
         <source>Values are kph or mph</source>
-        <translation>값은 kph 또는 mph입니다</translation>
+        <translation>곡률(CV)값 입니다</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5708"/>
         <source>Set TS values with comma</source>
-        <translation>TS 값 설정</translation>
+        <translation>TS(목표속도) 값 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5719"/>
@@ -2522,7 +2530,12 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5768"/>
         <source>Valus are TSL</source>
-        <translation>값은 TSL입니다</translation>
+        <translation>값은 OSM의 TurnSpeedLimit입니다</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="5778"/>
+        <source>Set TS values with comma</source>
+        <translation>TS(목표속도) 값 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5789"/>
@@ -2601,7 +2614,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5935"/>
         <source>Set API server to Retropilot/Comma/User&apos;s</source>
-        <translation>API 서버를 Retropilot/Comma/User&apos;s로 설정</translation>
+        <translation>API 서버를 레트로파일럿/Comma/사용자로 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5966"/>
@@ -2621,7 +2634,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5976"/>
         <source>You&apos;ve chosen comma server. Your uploads might be ignored if you upload your data. I highly recommend you should reset the device to avoid be banned.</source>
-        <translation>콤마 서버를 선택했습니다. 데이터를 업로드하면 업로드가 무시될 수 있습니다. 금지되지 않도록 장치를 재설정할 것을 강력히 권장합니다.</translation>
+        <translation>콤마 서버를 선택했습니다. 공식장치를 사용하는 경우 장치가 블락되지 않도록 장치를 완전 초기화하고 콤마 순정 소프트웨어로 설치하는것을 강력히 권장합니다.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5981"/>
@@ -2671,7 +2684,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6097"/>
         <source>Do you want to unset? the API server gets back to Retropilot server and Device will be rebooted now.</source>
-        <translation>설정을 해제하시겠습니까? API 서버가 Retropilot 서버로 돌아가면 장치가 지금 재부팅됩니다.</translation>
+        <translation>설정을 해제하시겠습니까? API 서버가 레트로파일럿 서버로 바뀌며 장치가 지금 재부팅됩니다.</translation>
     </message>
 </context>
 <context>
@@ -2684,7 +2697,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6120"/>
         <source>Set the Mapbox sytle to Comma/OPKR/User&apos;s</source>
-        <translation>Mapbox 시스템을 콤마/OPKR/사용자로 설정</translation>
+        <translation>Mapbox 시스템을 Comma/OPKR/사용자로 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6151"/>
@@ -2704,7 +2717,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6165"/>
         <source>You&apos;ve chosen own style. Please set your mapbox style to the param (MapboxStyleCustom). File location: /data/params/d/MapboxStyleCustom</source>
-        <translation>자신만의 스타일을 선택하셨습니다. 맵박스 스타일을 파라미터 (MapboxStyleCustom)으로 설정하십시오. 파일 위치: /data/params/d/MapboxStyleCustom</translation>
+        <translation>자신만의 스타일을 선택하셨습니다. 파라미터(MapboxStyleCustom)에 본인의 스타일값을 입력하세요. 파일 위치: /data/params/d/MapboxStyleCustom</translation>
     </message>
 </context>
 <context>
@@ -2717,7 +2730,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6251"/>
         <source>Comma Default: 25, this value cannot be acceptable at some cars. So adjust the number if you want to. It generates RES CAN messages when leadcar is moving. If departure is failed, increase the number. In opposite, if CAN error occurs, decrease the number.</source>
-        <translation>콤마 기본값: 25, 일부 차량에서는 이 값을 사용할 수 없습니다. 그러니 당신이 원한다면 숫자를 조정하세요. 리드카가 움직일 때 RESCAN 메시지를 생성합니다. 출발에 실패하면 횟수를 늘립니다. 반대로 CAN 오류가 발생하면 숫자를 줄이십시오.</translation>
+        <translation>콤마 기본값: 25, 일부 차량에서는 이 값이 작동하지 않을 수 있습니다. 숫자를 조정하여 해당 기능이 작동되도록 하십시오. 선행차가 움직일 때 RES버튼의 CAN 메시지를 보냅니다. 출발에 실패하면 횟수를 늘립니다. 반대로 CAN 오류가 발생하면 숫자를 줄이십시오.</translation>
     </message>
 </context>
 <context>
@@ -2753,7 +2766,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6374"/>
         <source>Vision Only, Vision+Radar, Radar Only, OPKR Custom</source>
-        <translation>비전만, 비전+레이더, 레이더만, OPKR 사용자 지정</translation>
+        <translation>비전전용, 비전+레이더, 레이더전용, OPKR 커스텀</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6432"/>
@@ -2781,12 +2794,12 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6442"/>
         <source>Curv Decel Option</source>
-        <translation>곡선 감속 옵션</translation>
+        <translation>커브 감속 옵션</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6442"/>
         <source>None, Vision+OSM, Vision Only, OSM Only</source>
-        <translation>미사용, 비전+OSM, 비전만, OSM만</translation>
+        <translation>미사용, 비전+OSM, 비전전용, OSM전용</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6500"/>
@@ -2819,7 +2832,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6510"/>
         <source>Give delay time to trigger for AutoRES while driving.</source>
-        <translation>주행 중 AutoRES를 실행할 지연 시간을 줍니다.</translation>
+        <translation>주행 중 자동RES를 실행할 때 지연 시간을 줍니다.</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6566"/>
@@ -2837,7 +2850,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6574"/>
         <source>Set the offset speed according to speed limit of OSM. (interpolation value)</source>
-        <translation>OSM의 제한속도에 따라 오프셋 속도를 설정한다.(보간값)</translation>
+        <translation>OSM의 제한속도에 따른 오프셋 속도를 설정합니다.(중간값은 보간값)</translation>
     </message>
 </context>
 <context>
@@ -2848,9 +2861,14 @@
         <translation>SL 값 설정</translation>
     </message>
     <message>
+        <location filename="../qt/widgets/opkr.cc" line="6609"/>
+        <source>Values are kph or mph</source>
+        <translation>SpeedLimit값 설정(kph or mph)</translation>
+    </message>
+    <message>
         <location filename="../qt/widgets/opkr.cc" line="6619"/>
         <source>Set CTSL values with comma</source>
-        <translation>CTSL 값 설정</translation>
+        <translation>커스텀SL 값 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6630"/>
@@ -2873,7 +2891,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6644"/>
         <source>Adjust DisiredCurvatureLimit, Default is 0.05(DT_MDL), For HKG, maybe 0.2 is preferred from user&apos;s experience. If the steering digs into inside on intersection, upper the value. And then it will limit your scope of steering angle. In case of opposite situation, lower the value. this is multiplier of desired curvature rate not real limit value.</source>
-        <translation>DisiredCurvatureLimit 조정, 기본값은 0.05(DT_MDL)입니다. HKG의 경우 사용자의 경험에서 0.2가 선호됩니다. 스티어링이 교차로에서 안쪽으로 파고들면 값을 높인다. 그러면 스티어링 각도의 범위가 제한될 것입니다. 반대의 경우 값을 낮춥니다. 이것은 실제 한계값이 아닌 원하는 곡률 속도의 승수입니다.</translation>
+        <translation>DisiredCurvatureLimit 조정합니다. 기본값은 0.05(DT_MDL)입니다. HKG의 경우 사용자의 경험에 의해 0.2가 선호됩니다. 스티어링이 교차로에서 안쪽으로 파고들면 값을 높입니다. 그러면 스티어링 각도의 범위가 제한될 것입니다. 반대의 경우 값을 낮춥니다. 이것은 실제 제한값이 아닌 원하는 곡률 속도의 승수입니다.</translation>
     </message>
 </context>
 <context>
@@ -2888,15 +2906,33 @@
         <source>Set TR of each speeds. (Mid range is interpolation values)</source>
         <translation>각 속도의 TR을 설정합니다. (중간 범위는 보간값입니다.)</translation>
     </message>
+</context>
+<context>
+    <name>DynamicTRBySpeed</name>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6777"/>
         <source>Set Speed values with comma</source>
         <translation>속도 값 설정</translation>
     </message>
     <message>
+        <location filename="../qt/widgets/opkr.cc" line="6777"/>
+        <source>Values are kph or mph</source>
+        <translation>값은 kph 혹은 mph 입니다.</translation>
+    </message>
+    <message>
         <location filename="../qt/widgets/opkr.cc" line="6787"/>
         <source>Set TR values with comma</source>
         <translation>TR 값 설정</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6798"/>
+        <source>Index count does not match. Check your input again.</source>
+        <translation>인덱스 수가 일치하지 않습니다. 입력한 내용을 다시 확인하십시오.</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.cc" line="6809"/>
+        <source>EDIT</source>
+        <translation>변경</translation>
     </message>
 </context>
 <context>
@@ -2940,7 +2976,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6920"/>
         <source>Set LW(m) values with comma</source>
-        <translation>LW(m) 값 설정</translation>
+        <translation>차선폭(m) 값 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6931"/>
@@ -3042,7 +3078,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="7354"/>
         <source>AnimatedRPM Max</source>
-        <translation>RPM애니메이션 최대값</translation>
+        <translation>RPM 애니메이션 최대값</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="7354"/>
@@ -3112,7 +3148,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="8008"/>
         <source>Car starts to stop under the value.</source>
-        <translation>차간거리가 해당값 이하로 되면 차가 멈추기 시작한다.</translation>
+        <translation>차간거리가 해당값 이하로 되면 차가 멈추기 시작합니다.</translation>
     </message>
 </context>
 <context>
@@ -3125,7 +3161,7 @@
     <message>
         <location filename="../qt/widgets/opkr.cc" line="8071"/>
         <source>High values make early stopping and starting, but might be not comfortable. Low values are the opposite.</source>
-        <translation>값이 높으면 가감속 수치 변화가 빨라 이른 감속이 가능할수도 있지만 사용에 불편할 수 있습니다. 낮은 값은 그 반대입니다.</translation>
+        <translation>값이 높으면 가감속 수치 변화가 빨라 이른 가감속이 가능할수도 있지만 사용에 불편할 수 있습니다. 낮은 값은 그 반대입니다.</translation>
     </message>
 </context>
 <context>
@@ -3151,7 +3187,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="147"/>
         <source>It uses the automatic departure function when stopping while using SCC.</source>
-        <translation>SCC 사용 중 정지 시 자동 출발 기능을 사용한다.</translation>
+        <translation>SCC 사용 중 정지 시 자동 출발 기능을 사용합니다.</translation>
     </message>
 </context>
 <context>
@@ -3164,7 +3200,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="159"/>
         <source>Use the cruise button while using SCC to assist in acceleration and deceleration.</source>
-        <translation>SCC를 사용하는 동안 가속과 감속을 보조하기 위해 크루즈 버튼을 사용하십시오. 크루즈 설정속도를 이용한 차간거리조절, 커브감속, 안전구간 감속 기능 등을 사용시에 반드시 켜야 합니다.</translation>
+        <translation>SCC를 사용하는 동안 가속과 감속을 보조하기 위해 크루즈 버튼 입력을 사용합니다. 크루즈 설정속도를 이용한 차간거리조절, 커브감속, 안전구간 감속 기능 등을 사용시에 반드시 켜야 합니다.</translation>
     </message>
 </context>
 <context>
@@ -3177,7 +3213,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="171"/>
         <source>For a quick start when stopping, the cruise gap will be changed to 1 step, and after departure, it will return to the original cruise gap according to certain conditions.</source>
-        <translation>정차 시 빠른 출발을 위해 크루즈 갭은 1단계로 변경되며 출발 후에는 일정 조건에 따라 원래 크루즈 갭으로 복귀한다.</translation>
+        <translation>정차 시 빠른 출발을 위해 크루즈 갭은 1단계로 변경되며 출발 후에는 일정 조건에 따라 원래 크루즈 갭으로 복귀합니다.</translation>
     </message>
 </context>
 <context>
@@ -3203,7 +3239,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="195"/>
         <source>If the brake is applied while using the SCC and the standby mode is changed (CANCEL is not applicable), set it back to the previous speed when the brake pedal is released/accelerated pedal is operated. It operates when the cruise speed is set and the vehicle speed is more than 30 km/h or the car in front is recognized.</source>
-        <translation>SCC를 사용하는 동안 브레이크를 밟고 대기 모드를 변경한 경우(CANCEL버튼으로 크루즈 취소한 경우는 실행되지 않음) 브레이크 페달을 놓거나 가속 페달을 작동할 때 이전 속도로 다시 설정하십시오. 순항속도가 설정돼 차량 속도가 30㎞/h를 넘거나 앞차가 인식될 때 작동한다.</translation>
+        <translation>SCC를 사용하는 동안 브레이크를 밟고 대기 모드를 변경한 경우(CANCEL버튼으로 크루즈 취소한 경우는 실행되지 않음) 브레이크 페달을 놓거나 가속 페달을 작동할 때 SCC를 재 설정합니다. 차량 속도가 30km/h를 넘거나 앞차가 인식될 때 작동합니다.</translation>
     </message>
 </context>
 <context>
@@ -3237,7 +3273,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="236"/>
         <source>User-Friendly Control(UFC) Mode</source>
-        <translation>UFC 모드</translation>
+        <translation>UFC(User-Friendly Control) 모드</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.h" line="236"/>
@@ -3409,7 +3445,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="424"/>
         <source>Create a Prebuilt file and speed up booting. When this function is turned on, the booting speed is accelerated using the cache, and if you press the update button in the menu after modifying the code, or if you rebooted with the &apos;gi&apos; command in the command window, remove it automatically and compile it.</source>
-        <translation>Prebuilt 파일을 만들고 부팅 속도를 높입니다. 이 기능을 켜면 캐시를 이용해 부팅 속도가 빨라지며, 코드를 수정한 뒤 메뉴에서 업데이트 버튼을 누르거나 명령창에서 &apos;gi&apos; 명령으로 재부팅한 경우 자동으로 삭제하고 컴파일한다.</translation>
+        <translation>Prebuilt 파일을 만들고 부팅 속도를 높입니다. 이 기능을 켜면 캐시를 이용해 부팅 속도가 빨라지며, 코드를 수정한 뒤 메뉴에서 업데이트 버튼을 누르거나 명령창에서 &apos;gi&apos; 명령으로 재부팅한 경우 자동으로 삭제하고 컴파일합니다.</translation>
     </message>
 </context>
 <context>
@@ -3443,7 +3479,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="460"/>
         <source>It is used when the gear recognition problem. Basically, CABANA data should be analyzed, but it is temporarily resolved.</source>
-        <translation>기어 인식 문제가 있을 때 사용합니다. 기본적으로 CABANA 데이터를 분석해야 하지만 일시적으로 해결됩니다.</translation>
+        <translation>기어 인식 문제가 있을 때 사용합니다. 기본적으로 CABANA 데이터를 분석해야 하지만 임시로 해결합니다.</translation>
     </message>
 </context>
 <context>
@@ -3521,7 +3557,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="539"/>
         <source>Stop a little further ahead than the radar stop distance. If you approach the car in front of you at a high speed, it may sometimes be difficult to stop enough, so if you are uncomfortable, turn off the function.</source>
-        <translation>레이더 정지 거리보다 조금 더 앞에서 정지합니다. 앞차에 고속으로 접근하면 충분히 정차하기 어려운 경우가 있을 수 있으므로 불편하면 기능을 끄도록 한다.</translation>
+        <translation>레이더 정지 거리를 조정합니다. 앞차에 고속으로 접근하면 충분히 정차하기 어려운 경우가 있을 수 있으므로 불편하면 기능을 끄도록 합니다.</translation>
     </message>
 </context>
 <context>
@@ -3581,12 +3617,12 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="604"/>
         <source>Use GoogleMap for Mapbox</source>
-        <translation>맵박스에 Google 지도 사용</translation>
+        <translation>맵박스에 구글 지도 사용</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.h" line="604"/>
         <source>Use GoogleMap when you search a destination.</source>
-        <translation>목적지를 검색할 때 Google 지도를 사용하십시오.</translation>
+        <translation>목적지를 검색할 때 구글 지도를 사용합니다.</translation>
     </message>
 </context>
 <context>
@@ -3625,7 +3661,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="640"/>
         <source>Turn this on, if can error occurs on ISG operation.</source>
-        <translation>ISG 작동중에 오류가 발생할 수 있는 경우 이 기능을 켜십시오.</translation>
+        <translation>ISG 작동중에 오류가 발생하는 경우 이 기능을 켜십시오.</translation>
     </message>
 </context>
 <context>
@@ -3638,7 +3674,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="652"/>
         <source>Turn this on, if you want to use Stock LKAS at OP disengaged status. Seems this related to cluster error when OP active because Stock CAN messages over PANDA or not.</source>
-        <translation>순정 LKAS를 오픈파일럿 해제 상태에서 사용하려면 이 스위치를 켜십시오. 순정 CAN 메시지가 PANDA를 통해 전송되는지 여부에 따라 오픈파일럿 활성 시 클러스터 오류와 관련이 있는 것으로 보입니다.</translation>
+        <translation>순정 LKAS를 오픈파일럿 해제 상태에서 사용하려면 이 스위치를 켜십시오. 순정 CAN 메시지가 판다를 통해 전송되는지 여부에 따라 오픈파일럿 활성 시 클러스터 오류와 관련이 있는 것으로 보입니다.</translation>
     </message>
 </context>
 <context>
@@ -3664,7 +3700,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="676"/>
         <source>Turn this on, if auto resume doesn&apos;t work at standstill. some cars only(ex. GENESIS). before enable, try to adjust RES message counts above.(reboot required)</source>
-        <translation>자동 Resume 기능이 정지 상태에서 작동하지 않는 경우 이 기능을 켜십시오. 일부 차량만 사용할 수 있습니다. 활성화하기 전에 위의 RES 메시지 수를 먼저 조정해 보십시오. 그래도 안된다면 이기능을 켜세요.(재부팅 필요)</translation>
+        <translation>자동 Resume 기능이 정지 상태에서 작동하지 않는 경우 이 기능을 켜십시오. 활성화하기 전에 위의 RES 메시지 횟수를 먼저 조정해 보십시오. 그래도 안된다면 이기능을 켜세요.(재부팅 필요)</translation>
     </message>
 </context>
 <context>
@@ -3677,7 +3713,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="688"/>
         <source>If you want to use Mapbox, turn on and then connect to device using web browser http://(device ip):8082  Mapbox setting will show up and type mapbox pk and sk token(you can created this on mapbox.com website). If you want to search destinations with googlemap, first, you should create google api key and enable Enable GoogleMap for Mapbox</source>
-        <translation>맵박스를 사용하려면 웹 브라우저 http://(device ip):8082 에 접속, 맵박스 설정이 나타나고 맵박스 pk 및 sk 토큰을 입력합니다(mapbox.com 웹 사이트에서 생성할 수 있습니다). 구글맵으로 목적지를 검색하려면 먼저 구글 api 키를 생성하고 맵박스에서 구글맵 사용 가능</translation>
+        <translation>맵박스를 사용하려면 웹 브라우저 http://(device ip):8082 에 접속, 맵박스 설정이 나타나고 맵박스 pk 및 sk 토큰을 입력합니다(mapbox.com 웹 사이트에서 생성할 수 있습니다). 구글맵으로 목적지를 검색하려면 먼저 구글 api 키를 생성하고 토큰에 해당키를 입력합니다.</translation>
     </message>
 </context>
 <context>
@@ -3703,7 +3739,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="712"/>
         <source>This is pre-requisite for LongControl of HKG. It seems that this affects AEB. So do not use this if you have any concern.</source>
-        <translation>이것은 HKG의 Long Control을 위한 전제 조건이다. 이것은 AEB에 영향을 미치는 것 같다. 그러니 만약 당신이 걱정이 있다면 이것을 사용하지 마세요.</translation>
+        <translation>이것은 HKG의 Long Control을 위한 전제 조건입니다. 이것은 AEB에 영향을 미치는 것 같습니다. 해당 부분이 우려가 된다면 이것을 사용하지 마세요.</translation>
     </message>
 </context>
 <context>
@@ -3768,7 +3804,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="772"/>
         <source>to avoid LKAS fault above max angle limit(car specific). This is live value. Find out your maxframe while driving.</source>
-        <translation>최대 조향각(MaxAngle)을 초과시 LKAS Fault를 방지합니다. 이것은 라이브 밸류입니다. 운전하면서 LKAS Fault가 발생하지 않는 차량의 MaxFrame을 찾아보세요.</translation>
+        <translation>최대 조향각(MaxAngle)을 초과시 LKAS Fault를 방지합니다. 이것은 라이브 밸류입니다. 운전하면서 LKAS Fault가 발생하지 않는 차량의 MaxFrame을 찾아보십시오.</translation>
     </message>
 </context>
 <context>
@@ -3859,7 +3895,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="856"/>
         <source>This increase offset at low speed and decrease offset at low speed. If you feel car moves to right at low speed.</source>
-        <translation>이렇게 하면 저속에서는 오프셋이 증가하고 저속에서는 오프셋이 감소합니다. 만약 당신이 차가 낮은 속도로 오른쪽으로 치우치는 것을 느낀다면 이기능을 켜는것을 추천합니다.</translation>
+        <translation>이 기능은 저속에서는 카메라오프셋을 증가시키고 고속에서는 카메라오프셋을 원래대로 만듭니다. 만약 차량이 낮은 속도에서 오른쪽으로 치우치는 것을 느낀다면 이기능을 켜는것을 추천합니다.</translation>
     </message>
 </context>
 <context>
@@ -3898,7 +3934,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="892"/>
         <source>Local only OSM. This will download DBs from online. Much storage is required. If your storage is not enough, Compiling occurs every boot time.</source>
-        <translation>로컬 전용 OSM. 온라인에서 DB를 다운로드합니다. 많은 스토리지가 필요합니다. 저장 공간이 충분하지 않으면 부팅 시마다 컴파일이 발생합니다.</translation>
+        <translation>로컬 전용 OSM. 온라인에서 DB를 다운로드합니다. 많은 스토리지가 필요합니다. 저장 공간이 충분하지 않으면 부팅 시마다 컴파일이 발생합니다. 이경우 기능을 끄십시오.</translation>
     </message>
 </context>
 </TS>
