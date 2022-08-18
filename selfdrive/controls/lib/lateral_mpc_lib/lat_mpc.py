@@ -88,7 +88,7 @@ def gen_lat_ocp():
   ocp.cost.yref_e = np.zeros((2, ))
   # TODO hacky weights to keep behavior the same
   ocp.model.cost_y_expr = vertcat(y_ego,
-                                  ((v_ego + 5.0) * psi_ego),
+                                  ((v_ego +5.0) * psi_ego),
                                   ((v_ego + 5.0) * 4.0 * curv_rate))
   ocp.model.cost_y_expr_e = vertcat(y_ego,
                                     ((v_ego + 5.0) * psi_ego))
