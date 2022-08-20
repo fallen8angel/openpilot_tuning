@@ -64,7 +64,7 @@ class DesireHelper:
     self.output_scale = 0.0
     self.ready_to_change = False
 
-  def update(self, CP, carcontrol, carstate, controlstate, lane_change_prob, md):
+  def update(self, CP, carstate, controlstate, lane_change_prob, md):
     try:
       if CP.lateralTuning.which() == 'pid':
         self.output_scale = controlstate.lateralControlState.pidState.output
@@ -108,7 +108,7 @@ class DesireHelper:
 
     if self.lane_change_state == LaneChangeState.off and road_edge_stat == lane_direction:
       self.lane_change_direction = LaneChangeDirection.none
-    elif (not carcontrol.latActive) or (self.lane_change_timer > LANE_CHANGE_TIME_MAX) or (abs(self.output_scale) >= 0.85 and self.lane_change_timer > 0.7):
+    elif (not controlstate.active) or (self.lane_change_timer > LANE_CHANGE_TIME_MAX) or (abs(self.output_scale) >= 0.85 and self.lane_change_timer > 0.7):
       self.lane_change_state = LaneChangeState.off
       self.lane_change_direction = LaneChangeDirection.none
     else:
