@@ -397,7 +397,6 @@ static void ui_draw_debug(UIState *s) {
   if (scene.nDebugUi3) {
     ui_draw_text(s, ui_viz_rx, debug_y3, scene.alertTextMsg3.c_str(), scene.mapbox_running?34:45, COLOR_WHITE_ALPHA(125), "sans-semibold");
   }
-
   
   nvgFillColor(s->vg, COLOR_WHITE_ALPHA(150));
   if (scene.nDebugUi2) {
@@ -447,7 +446,7 @@ static void ui_draw_debug(UIState *s) {
       ui_draw_text(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+520, scene.liveMapData.ocurrentRoadName.c_str(), 34, COLOR_WHITE_ALPHA(125), "KaiGenGothicKR-Medium");
       }
     }
-
+  }  
   if (scene.nDebugUi3) {
     ui_print(s, ui_viz_rx, ui_viz_ry+560, "0: %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f",
      scene.longitudinalPlan.lead0[0], scene.longitudinalPlan.lead0[1], scene.longitudinalPlan.lead0[2], scene.longitudinalPlan.lead0[3], scene.longitudinalPlan.lead0[4],
@@ -471,51 +470,39 @@ static void ui_draw_debug(UIState *s) {
      scene.longitudinalPlan.stopline[10], scene.longitudinalPlan.stopline[11], scene.longitudinalPlan.stopline[12]);
     ui_print(s, ui_viz_rx, ui_viz_ry+760, "P:%.1f", scene.longitudinalPlan.stopprob);
   }
-    nvgFontSize(s->vg, 50);
-    nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
+  nvgFontSize(s->vg, 50);
+  nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
 
-    char const* szLaCMethod = nullptr;
-    char const* szLaCMethodCur = nullptr;
-    switch( scene.lateralControlMethod  )
-      {
-        case  0: szLaCMethod = "PID"; break;
-        case  1: szLaCMethod = "INDI"; break;
-        case  2: szLaCMethod = "LQR"; break;
-        case  3: szLaCMethod = "TORQUE"; break;
-        case  4: szLaCMethod = "Multi-Mode"; break;
-      }
-    switch( (int)scene.multi_lat_selected  )
-      {
-        case  0: szLaCMethodCur = "PID"; break;
-        case  1: szLaCMethodCur = "INDI"; break;
-        case  2: szLaCMethodCur = "LQR"; break;
-        case  3: szLaCMethodCur = "TORQUE"; break;
-      }
-    if ( !scene.animated_rpm )
+  char const* szLaCMethod = nullptr;
+  char const* szLaCMethodCur = nullptr;
+  switch( scene.lateralControlMethod  )
     {
-      if( szLaCMethod )
-        ui_draw_text(s, ui_viz_rx_center, bdr_s+300, szLaCMethod, 50, COLOR_WHITE_ALPHA(150), "KaiGenGothicKR-Medium");
-      if (scene.lateralControlMethod == 4) {
-        if( szLaCMethodCur )
-          ui_draw_text(s, ui_viz_rx_center, bdr_s+340, szLaCMethodCur, 45, COLOR_OCHRE_ALPHA(150), "KaiGenGothicKR-Medium");
-        }
-    } else {
-      if( szLaCMethod )
-        ui_draw_text(s, ui_viz_rx_center, bdr_s+325, szLaCMethod, 50, COLOR_WHITE_ALPHA(150), "KaiGenGothicKR-Medium");
-      if (scene.lateralControlMethod == 4) {
-        if( szLaCMethodCur )
-          ui_draw_text(s, ui_viz_rx_center, bdr_s+365, szLaCMethodCur, 45, COLOR_OCHRE_ALPHA(150), "KaiGenGothicKR-Medium");
-        }
+      case  0: szLaCMethod = "PID"; break;
+      case  1: szLaCMethod = "INDI"; break;
+      case  2: szLaCMethod = "LQR"; break;
+      case  3: szLaCMethod = "TORQUE"; break;
+      case  4: szLaCMethod = "Multi-Mode"; break;
     }
-    nvgTextAlign(s->vg, NVG_ALIGN_LEFT | NVG_ALIGN_MIDDLE);
-    if (scene.osm_enabled) {
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+240, "SL:%.0f", scene.liveMapData.ospeedLimit);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+280, "SLA:%.0f", scene.liveMapData.ospeedLimitAhead);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+320, "SLAD:%.0f", scene.liveMapData.ospeedLimitAheadDistance);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+360, "TSL:%.0f", scene.liveMapData.oturnSpeedLimit);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+400, "TSLED:%.0f", scene.liveMapData.oturnSpeedLimitEndDistance);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+440, "TSLS:%d", scene.liveMapData.oturnSpeedLimitSign);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+480, "TCO:%.2f", -scene.lateralPlan.totalCameraOffset);
+  switch( (int)scene.multi_lat_selected  )
+    {
+      case  0: szLaCMethodCur = "PID"; break;
+      case  1: szLaCMethodCur = "INDI"; break;
+      case  2: szLaCMethodCur = "LQR"; break;
+      case  3: szLaCMethodCur = "TORQUE"; break;
+    }
+  if ( !scene.animated_rpm ) {
+    if( szLaCMethod )
+      ui_draw_text(s, ui_viz_rx_center, bdr_s+300, szLaCMethod, 50, COLOR_WHITE_ALPHA(150), "KaiGenGothicKR-Medium");
+    if (scene.lateralControlMethod == 4) {
+      if( szLaCMethodCur )
+        ui_draw_text(s, ui_viz_rx_center, bdr_s+340, szLaCMethodCur, 45, COLOR_OCHRE_ALPHA(150), "KaiGenGothicKR-Medium");
+      }
+  } else {
+    if( szLaCMethod )
+      ui_draw_text(s, ui_viz_rx_center, bdr_s+325, szLaCMethod, 50, COLOR_WHITE_ALPHA(150), "KaiGenGothicKR-Medium");
+    if (scene.lateralControlMethod == 4) {
+      if( szLaCMethodCur ) 
+        ui_draw_text(s, ui_viz_rx_center, bdr_s+365, szLaCMethodCur, 45, COLOR_OCHRE_ALPHA(150), "KaiGenGothicKR-Medium");
     }
   }
   if (scene.cal_view) {
