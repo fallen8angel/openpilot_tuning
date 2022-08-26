@@ -5866,7 +5866,7 @@ void GetOffAlert::refresh() {
   }
 }
 
-OPKRNaviSelect::OPKRNaviSelect() : AbstractControl(tr("Navigation Select"), tr("Select the navigation you want to use.(Mappy/Waze/None)"), "../assets/offroad/icon_shell.png") {
+OPKRNaviSelect::OPKRNaviSelect() : AbstractControl(tr("Navigation Select"), tr("Select the navigation you want to use.(iNavi/Waze/None)"), "../assets/offroad/icon_shell.png") {
 
   label.setAlignment(Qt::AlignVCenter|Qt::AlignRight);
   label.setStyleSheet("color: #e0e879");
@@ -5924,7 +5924,7 @@ OPKRNaviSelect::OPKRNaviSelect() : AbstractControl(tr("Navigation Select"), tr("
 void OPKRNaviSelect::refresh() {
   QString option = QString::fromStdString(params.get("OPKRNaviSelect"));
   if (option == "0") {
-    label.setText(tr("Mappy"));
+    label.setText(tr("iNavi"));
   } else if (option == "1") {
     label.setText(tr("Waze"));
   } else {
@@ -5932,7 +5932,7 @@ void OPKRNaviSelect::refresh() {
   }
 }
 
-OPKRServerSelect::OPKRServerSelect() : AbstractControl(tr("API Server"), tr("Set API server to Retropilot/Comma/User's"), "../assets/offroad/icon_shell.png") {
+OPKRServerSelect::OPKRServerSelect() : AbstractControl(tr("API Server"), tr("Set API server to OPKR/Comma/User's"), "../assets/offroad/icon_shell.png") {
   btn1.setStyleSheet(R"(
     padding: 0;
     border-radius: 50px;
@@ -5963,7 +5963,7 @@ OPKRServerSelect::OPKRServerSelect() : AbstractControl(tr("API Server"), tr("Set
   hlayout->addWidget(&btn1);
   hlayout->addWidget(&btn2);
   hlayout->addWidget(&btn3);
-  btn1.setText(tr("Retropilot"));
+  btn1.setText(tr("OPKR"));
   btn2.setText(tr("Comma"));
   btn3.setText(tr("User's"));
 
@@ -6081,7 +6081,7 @@ OPKRServerAPI::OPKRServerAPI() : AbstractControl(tr("User's API"), tr("Set Your 
 
   QObject::connect(&btn, &QPushButton::clicked, [=]() {
     if (btn.text() == tr("SET")) {
-      QString users_api_host = InputDialog::getText(tr("Input Your API(url or ip):"), this);
+      QString users_api_host = InputDialog::getText(tr("Input Your API without http://"), this);
       if (users_api_host.length() > 0) {
         QString cmd0 = tr("Your Input is") + "\n" + users_api_host + "\n" + tr("Press OK to apply&reboot");
         if (ConfirmationDialog::confirm(cmd0, this)) {
@@ -6094,7 +6094,7 @@ OPKRServerAPI::OPKRServerAPI() : AbstractControl(tr("User's API"), tr("Set Your 
         }
       }
     } else if (btn.text() == tr("UNSET")) {
-      if (ConfirmationDialog::confirm(tr("Do you want to unset? the API server gets back to Retropilot server and Device will be rebooted now."), this)) {
+      if (ConfirmationDialog::confirm(tr("Do you want to unset? the API server gets back to OPKR server and Device will be rebooted now."), this)) {
         params.remove("OPKRServerAPI");
         params.put("OPKRServer", "0");
         QProcess::execute("rm -f /data/params/d/DongleId");

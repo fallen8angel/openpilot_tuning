@@ -2583,13 +2583,13 @@
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5869"/>
-        <source>Select the navigation you want to use.(Mappy/Waze/None)</source>
-        <translation>사용할 네비게이션을 선택합니다.(맵피/웨이즈/없음)</translation>
+        <source>Select the navigation you want to use.(iNavi/Waze/None)</source>
+        <translation>사용할 네비게이션을 선택합니다.(아이나비/웨이즈/없음)</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5927"/>
-        <source>Mappy</source>
-        <translation>맵피</translation>
+        <source>iNavi</source>
+        <translation>아이나비</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5929"/>
@@ -2611,13 +2611,13 @@
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5935"/>
-        <source>Set API server to Retropilot/Comma/User&apos;s</source>
-        <translation>API 서버를 레트로파일럿/Comma/사용자로 설정</translation>
+        <source>Set API server to OPKR/Comma/User&apos;s</source>
+        <translation>API 서버를 OPKR/Comma/사용자로 설정</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5966"/>
-        <source>Retropilot</source>
-        <translation>레트로파일럿</translation>
+        <source>OPKR</source>
+        <translation>OPKR</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="5967"/>
@@ -2666,8 +2666,8 @@
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6084"/>
-        <source>Input Your API(url or ip):</source>
-        <translation>API(url 또는 ip) 입력:</translation>
+        <source>Input Your API without http://</source>
+        <translation>API 입력(http://제외)</translation>
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6086"/>
@@ -2681,8 +2681,8 @@
     </message>
     <message>
         <location filename="../qt/widgets/opkr.cc" line="6097"/>
-        <source>Do you want to unset? the API server gets back to Retropilot server and Device will be rebooted now.</source>
-        <translation>설정을 해제하시겠습니까? API 서버가 레트로파일럿 서버로 바뀌며 장치가 지금 재부팅됩니다.</translation>
+        <source>Do you want to unset? the API server gets back to OPKR server and Device will be rebooted now.</source>
+        <translation>설정을 해제하시겠습니까? API 서버가 OPKR 서버로 바뀌며 장치가 지금 재부팅됩니다.</translation>
     </message>
 </context>
 <context>
@@ -3586,7 +3586,7 @@
     <message>
         <location filename="../qt/widgets/opkr.h" line="568"/>
         <source>When decelerating the safety section, use the safety speed from the vehicle navigation system (limited to some vehicles with the corresponding data).</source>
-        <translation>안전 구간에서 감속할 때 차량 내비게이션 시스템의 안전 속도를 사용합니다.(해당 데이터가 있는 일부 차량에 한함).</translation>
+        <translation>안전 구간에서 감속 시 차량 내비게이션의 안전 속도를 사용합니다.(해당 데이터가 있는 일부 차량에 한함). 순정안전구간 감속 기능 사용시 반드시 설정속도(MAX)를 제한속도보다 같거나 높게 설정하여야 합니다. ex)100구간인데 100미만으로 설정시 60으로 인식됩니다. 100구간에서는 반드시 100이상으로 설정하세요. 30구간인 경우는 69까지만 설정해야지 70으로 인식되지 않습니다. 40은 79까지, 50은 89까지, 60은 99까지 입니다.</translation>
     </message>
 </context>
 <context>
@@ -3938,6 +3938,20 @@
         <location filename="../qt/widgets/opkr.h" line="892"/>
         <source>Local only OSM. This will download DBs from online. Much storage is required. If your storage is not enough, Compiling occurs every boot time.</source>
         <translation>로컬 전용 OSM. 온라인에서 DB를 다운로드합니다. 많은 스토리지가 필요합니다. 저장 공간이 충분하지 않으면 부팅 시마다 컴파일이 발생합니다. 이경우 기능을 끄십시오.</translation>
+    </message>
+</context>
+</TS>
+<context>
+    <name>SpeedBumpDecelToggle</name>
+    <message>
+        <location filename="../qt/widgets/opkr.h" line="904"/>
+        <source>SpeedBump Deceleration</source>
+        <translation>과속방지턱 감속기능 사용</translation>
+    </message>
+    <message>
+        <location filename="../qt/widgets/opkr.h" line="904"/>
+        <source>Use the deceleration feature on the speed bump. It&apos;s an indirect control method. It can be decelerated directly in long control control, but for versatility, indirect control for now.</source>
+        <translation>과속방지턱에서 감속기능을 사용합니다. 롱컨트롤제어에서는 직접적으로 감속가능하나 범용성을 위하여 현재는 간접제어방식(크루즈버튼)으로 합니다.</translation>
     </message>
 </context>
 </TS>

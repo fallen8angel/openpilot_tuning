@@ -48,18 +48,18 @@ DriveStats::DriveStats(QWidget* parent) : QFrame(parent) {
   QString OPKR_SERVER = QString::fromStdString(Params().get("OPKRServer"));
   QString TARGET_SERVER = "";
   if (OPKR_SERVER == "0") {
-    TARGET_SERVER = util::getenv("API_HOST", "https://api.retropilot.org").c_str();
+    TARGET_SERVER = util::getenv("API_HOST", "http://opkr.tk:3000").c_str();
   } else if (OPKR_SERVER == "1") {
     TARGET_SERVER = util::getenv("API_HOST", "https://api.commadotai.com").c_str();
   } else if (OPKR_SERVER == "2") {
     TARGET_SERVER = "http://" + QString::fromStdString(Params().get("OPKRServerAPI"));
   } else {
-    TARGET_SERVER = util::getenv("API_HOST", "https://api.retropilot.org").c_str();
+    TARGET_SERVER = util::getenv("API_HOST", "http://opkr.tk:3000").c_str();
   }
 
   if (auto dongleId = getDongleId()) {
     QString url = TARGET_SERVER + "/v1.1/devices/" + *dongleId + "/stats";
-    RequestRepeater* repeater = new RequestRepeater(this, url, "ApiCache_DriveStats", 30);
+    RequestRepeater* repeater = new RequestRepeater(this, url, "ApiCache_DriveStats", 3720);
     QObject::connect(repeater, &RequestRepeater::requestDone, this, &DriveStats::parseResponse);
   }
 

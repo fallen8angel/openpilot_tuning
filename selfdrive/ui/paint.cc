@@ -426,11 +426,12 @@ static void ui_draw_debug(UIState *s) {
     //ui_print(s, ui_viz_rx, ui_viz_ry+800, "A:%.5f", scene.accel_sensor2);
     if (!scene.nDebugUi3) {
       if (scene.map_is_running) {
-        if (scene.liveNaviData.opkrspeedsign) ui_print(s, ui_viz_rx, ui_viz_ry+560, "SS:%d", scene.liveNaviData.opkrspeedsign);
-        if (scene.liveNaviData.opkrspeedlimit) ui_print(s, ui_viz_rx, ui_viz_ry+600, "SL:%d", scene.liveNaviData.opkrspeedlimit);
-        if (scene.liveNaviData.opkrspeedlimitdist) ui_print(s, ui_viz_rx, ui_viz_ry+640, "DS:%.0f", scene.liveNaviData.opkrspeedlimitdist);
-        if (scene.liveNaviData.opkrturninfo) ui_print(s, ui_viz_rx, ui_viz_ry+680, "TI:%d", scene.liveNaviData.opkrturninfo);
-        if (scene.liveNaviData.opkrdisttoturn) ui_print(s, ui_viz_rx, ui_viz_ry+720, "DT:%.0f", scene.liveNaviData.opkrdisttoturn);
+        if (scene.liveNaviData.opkrroadsign) ui_print(s, ui_viz_rx, ui_viz_ry+560, "RS:%d", scene.liveNaviData.opkrroadsign);
+        if (scene.liveNaviData.opkrspeedsign) ui_print(s, ui_viz_rx, ui_viz_ry+600, "CS:%d", scene.liveNaviData.opkrspeedsign);
+        if (scene.liveNaviData.opkrspeedlimit) ui_print(s, ui_viz_rx, ui_viz_ry+640, "SL:%d", scene.liveNaviData.opkrspeedlimit);
+        if (scene.liveNaviData.opkrspeedlimitdist) ui_print(s, ui_viz_rx, ui_viz_ry+680, "DS:%.0f", scene.liveNaviData.opkrspeedlimitdist);
+        if (scene.liveNaviData.opkrturninfo) ui_print(s, ui_viz_rx, ui_viz_ry+720, "TI:%d", scene.liveNaviData.opkrturninfo);
+        if (scene.liveNaviData.opkrdisttoturn) ui_print(s, ui_viz_rx, ui_viz_ry+760, "DT:%.0f", scene.liveNaviData.opkrdisttoturn);
       } else if (!scene.map_is_running && (*s->sm)["carState"].getCarState().getSafetySign() > 19) {
         ui_print(s, ui_viz_rx, ui_viz_ry+560, "SL:%.0f", (*s->sm)["carState"].getCarState().getSafetySign());
         ui_print(s, ui_viz_rx, ui_viz_ry+600, "DS:%.0f", (*s->sm)["carState"].getCarState().getSafetyDist());
@@ -803,28 +804,23 @@ static void ui_draw_vision_speed(UIState *s) {
 }
 
 static void ui_draw_vision_event(UIState *s) {
-  const int center_x = (bdr_s) + 2 * (184 + 15);
-  const int center_y = int(bdr_s);
+  const int sign_x = (bdr_s) + 2 * (184 + 15);
+  const int sign_y = int(bdr_s);
 
   if (!s->scene.comma_stock_ui){
-    //과속방지턱( 124 ) 일 경우
-    if (s->scene.liveNaviData.opkrspeedsign == 124 && s->scene.limitSpeedCamera == 0 && s->scene.limitSpeedCameraDist == 0) {
-      ui_draw_image(s, {960-175, 540-150, 350, 350}, "speed_bump", 0.3f); }
-    // 버스전용차로( 246 )일 경우
-    if (s->scene.liveNaviData.opkrspeedsign == 246) {ui_draw_image(s, {center_x, center_y, 200, 200}, "bus_only", 0.8f);} 
-    // 차선변경금지( 198 || 199 || 249 )일 경우
-    if (s->scene.liveNaviData.opkrspeedsign == 198 || s->scene.liveNaviData.opkrspeedsign == 199 || s->scene.liveNaviData.opkrspeedsign == 249) {
-      ui_draw_image(s, {center_x, center_y, 200, 200}, "do_not_change_lane", 0.8f);}
-    // 일반적인 과속단속구간( 135 || 150 || 200 || 231)일 경우 
-    if ((s->scene.liveNaviData.opkrspeedsign == 135 || s->scene.liveNaviData.opkrspeedsign == 150 || s->scene.liveNaviData.opkrspeedsign == 200 || s->scene.liveNaviData.opkrspeedsign == 231) && s->scene.liveNaviData.opkrspeedlimit > 29) {
-      if (s->scene.liveNaviData.opkrspeedlimit < 40) {ui_draw_image(s, {960-250, 540-200, 500, 500}, "speed_S30", 0.3f);} //중앙 스쿨존 이미
-    }
+    if (s->scene.liveNaviData.opkrroadsign == 107) {                                              // 107 과속방지턱 일 경우  
+      ui_draw_image(s, {960-175, 540-150, 350, 350}, "speed_bump", 0.3f);}
+    if (s->scene.liveNaviData.opkrspeedsign == 4 || s->scene.liveNaviData.opkrspeedsign == 7) {  // 4 or 7 버스전용차로 단속일 경우
+      ui_draw_image(s, {sign_x, sign_y, 200, 200}, "bus_only", 0.8f);} 
+    if (s->scene.liveNaviData.opkrspeedsign == 20) {                                              // 20 차선변경금지일 경우
+      ui_draw_image(s, {sign_x, sign_y, 200, 200}, "do_not_change_lane", 0.8f);}
+    if (s->scene.liveNaviData.opkrspeedsign == 16 && s->scene.liveNaviData.opkrspeedlimit > 29) { // 16 스쿨존일 경우
+      ui_draw_image(s, {960-250, 540-200, 500, 500}, "speed_S30", 0.3f);} 
   }
 
   const int viz_event_w = 220;
   const int viz_event_x = s->fb_w - (viz_event_w + bdr_s);
   const int viz_event_y = bdr_s;
-
   // draw steering wheel
   const int bg_wheel_size = 90;
   const int bg_wheel_x = viz_event_x + (viz_event_w-bg_wheel_size);
@@ -1405,17 +1401,17 @@ static void draw_safetysign(UIState *s) {
       nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
       ui_draw_text(s, rect_d.centerX(), rect_d.centerY(), safetyDist, 78, COLOR_WHITE_ALPHA(200/sl_opacity), "sans-bold");
     }
-  } else if ((s->scene.mapSign == 195 || s->scene.mapSign == 197) && safety_speed == 0 && safety_dist != 0 && !s->scene.comma_stock_ui) {
-    ui_fill_rect(s->vg, rect_si, COLOR_WHITE_ALPHA(200/sl_opacity), diameter2/2);
-    ui_draw_rect(s->vg, rect_s, COLOR_RED_ALPHA(200/sl_opacity), 20, diameter/2);
-    nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
-    ui_draw_text(s, rect_s.centerX(), rect_s.centerY(), "VAR\nSEC", 108, COLOR_BLACK_ALPHA(200/sl_opacity), "sans-bold");
-    if (safety_dist != 0) {
-      ui_fill_rect(s->vg, rect_d, COLOR_RED_ALPHA(opacity/sl_opacity), 20.);
-      ui_draw_rect(s->vg, rect_d, COLOR_WHITE_ALPHA(200/sl_opacity), 8, 20);
-      nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
-      ui_draw_text(s, rect_d.centerX(), rect_d.centerY(), safetyDist, 78, COLOR_WHITE_ALPHA(200/sl_opacity), "sans-bold");
-    }
+  // } else if ((s->scene.mapSign == 195 || s->scene.mapSign == 197) && safety_speed == 0 && safety_dist != 0 && !s->scene.comma_stock_ui) {
+  //   ui_fill_rect(s->vg, rect_si, COLOR_WHITE_ALPHA(200/sl_opacity), diameter2/2);
+  //   ui_draw_rect(s->vg, rect_s, COLOR_RED_ALPHA(200/sl_opacity), 20, diameter/2);
+  //   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
+  //   ui_draw_text(s, rect_s.centerX(), rect_s.centerY(), "VAR\nSEC", 108, COLOR_BLACK_ALPHA(200/sl_opacity), "sans-bold");
+  //   if (safety_dist != 0) {
+  //     ui_fill_rect(s->vg, rect_d, COLOR_RED_ALPHA(opacity/sl_opacity), 20.);
+  //     ui_draw_rect(s->vg, rect_d, COLOR_WHITE_ALPHA(200/sl_opacity), 8, 20);
+  //     nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
+  //     ui_draw_text(s, rect_d.centerX(), rect_d.centerY(), safetyDist, 78, COLOR_WHITE_ALPHA(200/sl_opacity), "sans-bold");
+  //   }
   }
 }
 
