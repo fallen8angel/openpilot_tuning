@@ -821,6 +821,7 @@ static void ui_draw_vision_event(UIState *s) {
   const int viz_event_w = 220;
   const int viz_event_x = s->fb_w - (viz_event_w + bdr_s);
   const int viz_event_y = bdr_s;
+
   // draw steering wheel
   const int bg_wheel_size = 90;
   const int bg_wheel_x = viz_event_x + (viz_event_w-bg_wheel_size);
