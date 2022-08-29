@@ -12,7 +12,7 @@ from selfdrive.car.hyundai.hyundaican import create_lkas11, create_clu11, create
                                              create_scc11, create_scc12, create_scc13, create_scc14, \
                                              create_scc42a, create_scc7d0, create_mdps12, create_fca11, create_fca12
 from selfdrive.car.hyundai.navicontrol  import NaviControl
-from selfdrive.car.hyundai.values import Buttons, CarControllerParams, CAR, FEATURES, STEER_THRESHOLD
+from selfdrive.car.hyundai.values import Buttons, CarControllerParams, CAR, FEATURES
 from selfdrive.controls.lib.desire_helper import LANE_CHANGE_SPEED_MIN
 from selfdrive.controls.lib.longcontrol import LongCtrlState
 
@@ -150,7 +150,6 @@ class CarController():
     self.steerDeltaUp_Max = int(self.params.get("SteerDeltaUpAdj", encoding="utf8"))
     self.steerDeltaDown_Max = int(self.params.get("SteerDeltaDownAdj", encoding="utf8"))
     self.model_speed_range = [30, 100, 255]
-    self.angle_range = [100, 20, 0]
     self.steerMax_range = [self.steerMax_Max, self.steerMax_base, self.steerMax_base]
     self.steerDeltaUp_range = [self.steerDeltaUp_Max, self.steerDeltaUp_base, self.steerDeltaUp_base]
     self.steerDeltaDown_range = [self.steerDeltaDown_Max, self.steerDeltaDown_base, self.steerDeltaDown_base]
@@ -269,13 +268,13 @@ class CarController():
     self.yRel = self.sm['radarState'].leadOne.yRel #EON Lead
 
     if self.enable_steer_more and self.to_avoid_lkas_fault_enabled and abs(CS.out.steeringAngleDeg) > self.to_avoid_lkas_fault_max_angle*0.5 and \
-     CS.out.vEgo <= 12.5 and not (0 <= self.driver_steering_torque_above_timer < 100): # 45km/h 
+     CS.out.vEgo <= 12.5 and not (0 <= self.driver_steering_torque_above_timer < 100):
       self.steerMax = self.steerMax_Max
       self.steerDeltaUp = self.steerDeltaUp_Max
       self.steerDeltaDown = self.steerDeltaDown_Max
-    elif CS.out.vEgo > 4.16: # 15km/h 8.3:
+    elif CS.out.vEgo > 8.3:
       if self.variable_steer_max:
-        self.steerMax = interp(int(abs(CS.out.steeringAngleDeg)), self.angle_range, self.steerMax_range) #interp(int(abs(self.model_speed)), self.model_speed_range, self.steerMax_range)
+        self.steerMax = interp(int(abs(self.model_speed)), self.model_speed_range, self.steerMax_range)
       else:
         self.steerMax = self.steerMax_base
       if self.variable_steer_delta:
@@ -356,7 +355,7 @@ class CarController():
     if self.emergency_manual_timer > 0:
       self.emergency_manual_timer -= 1
 
-    if abs(CS.out.steeringTorque) > STEER_THRESHOLD and CS.out.vEgo < LANE_CHANGE_SPEED_MIN:
+    if abs(CS.out.steeringTorque) > 170 and CS.out.vEgo < LANE_CHANGE_SPEED_MIN:
       self.driver_steering_torque_above = True
     else:
       self.driver_steering_torque_above = False
