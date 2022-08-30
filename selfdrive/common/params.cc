@@ -386,6 +386,7 @@ std::unordered_map<std::string, uint32_t> keys = {
     {"VarCruiseSpeedFactor", PERSISTENT},
     {"LanguageSetting", PERSISTENT},
     {"OPKRSpeedBump", PERSISTENT},
+    {"OPKREarlyStop", PERSISTENT},
 };
 
 } // namespace
