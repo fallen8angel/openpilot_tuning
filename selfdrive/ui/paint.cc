@@ -234,10 +234,10 @@ static void ui_draw_vision_lane_lines(UIState *s) {
     } else {
       if (!scene.lateralPlan.lanelessModeStatus) {
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
-          nvgRGBA(red_lvl, green_lvl, 0, 160), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
+          nvgRGBA(red_lvl, green_lvl, 0, 180), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
       } else { //laneless status
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
-          nvgRGBA(red_lvl, 150, green_lvl, 160), nvgRGBA((int)(0.7*red_lvl), 150, (int)(0.7*green_lvl), 1));
+          nvgRGBA(red_lvl, 50, green_lvl, 180), nvgRGBA((int)(0.7*red_lvl), 50, (int)(0.7*green_lvl), 1));
       }
     }
   } else {
