@@ -235,9 +235,11 @@ static void ui_draw_vision_lane_lines(UIState *s) {
       if (!scene.lateralPlan.lanelessModeStatus) {
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
           nvgRGBA(red_lvl, green_lvl, 0, 180), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
+          // nvgRGBA(red_lvl, green_lvl, 0, 180), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
       } else { //laneless status
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
           nvgRGBA(red_lvl, 50, green_lvl, 180), nvgRGBA((int)(0.7*red_lvl), 50, (int)(0.7*green_lvl), 1));
+          // nvgRGBA(red_lvl, 50, green_lvl, 180), nvgRGBA((int)(0.7*red_lvl), 50, (int)(0.7*green_lvl), 1));
       }
     }
   } else {
@@ -1814,35 +1816,6 @@ static void ui_draw_live_tune_panel(UIState *s) {
       szTuneName = "TORQUE: Fric";
     }
   }
-  // } else if (lateralControlMethod == 4) {  
-  //   float max_lat_accel = s->scene.torqueMaxLatAccel * 0.1;
-  //   if (live_tune_panel_list == (s->scene.list_count+0)) {
-  //     sprintf(szTuneParam, "%0.1f>%0.2f", s->scene.torqueKp*0.1, (s->scene.torqueKp*0.1)/max_lat_accel);
-  //     szTuneName = "TORQUE: Kp";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+1)) {
-  //     sprintf(szTuneParam, "%0.1f>%0.2f", s->scene.torqueKf*0.1, (s->scene.torqueKf*0.1)/max_lat_accel);
-  //     szTuneName = "TORQUE: Kf";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+2)) {
-  //     sprintf(szTuneParam, "%0.1f>%0.2f", s->scene.torqueKi*0.1, (s->scene.torqueKi*0.1)/max_lat_accel);
-  //     szTuneName = "TORQUE: Ki";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+3)) {
-  //     sprintf(szTuneParam, "%0.1f", s->scene.torqueMaxLatAccel*0.1);
-  //     szTuneName = "TORQUE: MaxL";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+4)) {
-  //     sprintf(szTuneParam, "%0.3f", s->scene.torqueFriction*0.001);
-  //     szTuneName = "TORQUE: Fric";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+5)) {
-  //     sprintf(szTuneParam, "%0.0f", s->scene.lqrScale*1.0);
-  //     szTuneName = "LQR: Scale";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+6)) {
-  //     sprintf(szTuneParam, "%0.3f", s->scene.lqrKi*0.001);
-  //     szTuneName = "LQR: Ki";
-  //   } else if (live_tune_panel_list == (s->scene.list_count+7)) {
-  //     sprintf(szTuneParam, "%0.5f", s->scene.lqrDcGain*0.00001);
-  //     szTuneName = "LQR: DcGain";
-  //   }
-  // }
-
 
   if (szTuneName) {
     ui_print(s, s->fb_w/2, y_pos + height/2, "%s", szTuneParam);
@@ -1862,7 +1835,7 @@ static void ui_draw_auto_hold(UIState *s) {
     y_pos = 740-140;
   }
   const int width = 500;
-  const Rect rect = {s->fb_w/2 - width/2, y_pos, width, 145};
+  const Rect rect = {s->fb_w/2 - width/2, y_pos + 50, width, 145};
   NVGcolor color = COLOR_BLACK_ALPHA(50);
   ui_fill_rect(s->vg, rect, color, 30.);
   ui_draw_rect(s->vg, rect, COLOR_WHITE_ALPHA(50), 10, 20.);
