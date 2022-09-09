@@ -62,8 +62,9 @@ typedef struct Rect {
   }
 } Rect;
 
-const Rect map_overlay_btn = {0, 465, 150, 150};
-const Rect map_return_btn = {1770, 465, 150, 150};
+// const Rect map_overlay_btn = {0, 465, 150, 150}; //left middle side end
+const Rect map_overlay_btn = {860, 440, 200, 200}; //center area
+const Rect map_return_btn = {1720, 440, 200, 200}; 
 const Rect map_btn = {1340, 900, 200, 180};
 const Rect mapbox_btn = {465, 905, 140, 140};
 const Rect rec_btn = {1540, 15, 200, 180};

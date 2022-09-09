@@ -79,7 +79,6 @@ static void ui_draw_circle_image_rotation(const UIState *s, int center_x, int ce
   nvgCircle(s->vg, center_x, center_y + (bdr_s+7), radius);
   nvgFillColor(s->vg, color);
   nvgFill(s->vg);
-  //ui_draw_image(s, {center_x - (img_size / 2), center_y - (img_size / 2), img_size, img_size}, image, img_alpha);
 
   nvgSave( s->vg );
   nvgTranslate(s->vg, center_x, (center_y + (bdr_s*1.5)));
@@ -150,11 +149,8 @@ static void draw_lead(UIState *s, const cereal::RadarState::LeadData::Reader &le
     } else {
       draw_chevron(s, x, y, sz, nvgRGBA(0, 160, 0, 200), nvgRGBA(0, 160, 0, 200));
     }
-    // ui_draw_text(s, x, y + sz/1.5f, "R", 60, COLOR_WHITE, "sans-bold");
     ui_draw_text(s, x, y + sz/1.5f, radarDist, 80, COLOR_WHITE, "sans-bold");
   } else {
-    // draw_chevron(s, x, y, sz, nvgRGBA(120, 120, 255, fillAlpha), COLOR_BLUE);
-    // ui_draw_text(s, x, y + sz/1.5f, "CAM", 80, COLOR_WHITE, "sans-bold");
     ui_draw_circle_image_rotation(s, x, y, sz, "custom_lead_vision", nvgRGBA(0, 0, 0, 0), 0.7f, s->scene.bearingUblox);
   }
 }
@@ -235,11 +231,9 @@ static void ui_draw_vision_lane_lines(UIState *s) {
       if (!scene.lateralPlan.lanelessModeStatus) {
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
           nvgRGBA(red_lvl, green_lvl, 0, 180), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
-          // nvgRGBA(red_lvl, green_lvl, 0, 180), nvgRGBA((int)(0.7*red_lvl), (int)(0.7*green_lvl), 0, 1));
       } else { //laneless status
         track_bg = nvgLinearGradient(s->vg, s->fb_w, s->fb_h, s->fb_w, s->fb_h*.4,
           nvgRGBA(red_lvl, 50, green_lvl, 180), nvgRGBA((int)(0.7*red_lvl), 50, (int)(0.7*green_lvl), 1));
-          // nvgRGBA(red_lvl, 50, green_lvl, 180), nvgRGBA((int)(0.7*red_lvl), 50, (int)(0.7*green_lvl), 1));
       }
     }
   } else {
@@ -259,7 +253,6 @@ static void ui_draw_world(UIState *s) {
   ui_draw_vision_lane_lines(s);
 
   // Draw lead and stop line indicators if openpilot is handling longitudinal
-  //if (s->scene.longitudinal_control) {
   if (true) {
     auto lead_one = (*s->sm)["radarState"].getRadarState().getLeadOne();
     auto lead_two = (*s->sm)["radarState"].getRadarState().getLeadTwo();
@@ -402,10 +395,6 @@ static void ui_draw_debug(UIState *s) {
   
   nvgFillColor(s->vg, COLOR_WHITE_ALPHA(150));
   if (scene.nDebugUi2) {
-    //if (scene.gpsAccuracyUblox != 0.00) {
-    //  nvgFontSize(s->vg, 34);
-    //  ui_print(s, 28, 28, "LAT／LON: %.5f／%.5f", scene.latitudeUblox, scene.longitudeUblox);
-    //}
     if (scene.mapbox_running) {
       nvgFontSize(s->vg, 40);
     } else {
@@ -602,11 +591,9 @@ static void ui_draw_vision_face(UIState *s) {
   const int center_x = radius + bdr_s;
   const int center_y = 1080 - 85 - 30;
   if (!s->scene.comma_stock_ui) {
-    // ui_draw_circle_image(s, center_x + (radius*2 + 10) * 3 + 10, center_y, radius, s->scene.dm_active ? "driver_face" : "driver_face_not", true);
     ui_draw_circle_image_rotation(s, center_x + (radius*2 + 10) * 3 + 10, center_y, radius + 15, s->scene.dm_active ? "driver_face" : "driver_face_not", nvgRGBA(0, 0, 0, 0), 1.0f);
   } else {
     ui_draw_circle_image(s, center_x, center_y, radius, s->scene.dm_active ? "driver_face" : "driver_face_not", true);
-    // ui_draw_circle_image_rotation(s, center_x, center_y, radius + 15, s->scene.dm_active ? "driver_face" : "driver_face_not", nvgRGBA(0, 0, 0, 0), 1.0f);
   }
 }
 
@@ -936,12 +923,6 @@ static int bb_ui_draw_measure(UIState *s, const char* bb_value, const char* bb_u
     if (strlen(bb_uom) > 0) {
       dx = (int)(bb_uomFontSize*2.5/2);
     }
-    //print value
-    // nvgFontFace(s->vg, "sans-semibold");
-    // nvgFontSize(s->vg, bb_valueFontSize*0.8);
-    // nvgFillColor(s->vg, bb_valueColor);
-    // nvgText(s->vg, bb_x-dx/2, bb_y+ (int)(bb_valueFontSize*2.0)+5 + (int)(bb_labelFontSize*2.0)+25, bb_value, NULL);
-    //print label
     nvgFontFace(s->vg, "sans-regular");
     nvgFontSize(s->vg, bb_labelFontSize*2.5);
     nvgFillColor(s->vg, bb_labelColor);
@@ -1119,8 +1100,6 @@ static void bb_ui_draw_measures_right(UIState *s, int bb_x, int bb_y, int bb_w )
 
   //add gear step & gap 
   if (0 < scene.gear_step && scene.gear_step < 9) {
-    //char val_str[16];
-    //char uom_str[6];
     std::string main_val = "";
     if (scene.charge_meter > 0) {
       main_val = std::to_string(int(scene.charge_meter)) + "%";  
@@ -1339,8 +1318,6 @@ static void draw_safetysign(UIState *s) {
   int safety_speed = s->scene.limitSpeedCamera;
   float safety_dist = s->scene.limitSpeedCameraDist;
   float maxspeed = round(s->scene.controls_state.getVCruise());
-  //int safety_speed = s->scene.liveNaviData.opkrspeedlimit;
-  //float safety_dist = s->scene.liveNaviData.opkrspeedlimitdist;
   int sl_opacity = 0;
   if (s->scene.sl_decel_off) {
     sl_opacity = 3;
