@@ -144,8 +144,10 @@ void OnroadAlerts::paintEvent(QPaintEvent *event) {
     return;
   }
   static std::map<cereal::ControlsState::AlertSize, const int> alert_sizes = {
-    {cereal::ControlsState::AlertSize::SMALL, 271},
-    {cereal::ControlsState::AlertSize::MID, 420},
+    // {cereal::ControlsState::AlertSize::SMALL, 271},
+    // {cereal::ControlsState::AlertSize::MID, 420},
+    {cereal::ControlsState::AlertSize::SMALL, 180},
+    {cereal::ControlsState::AlertSize::MID, 200},
     {cereal::ControlsState::AlertSize::FULL, height()},
   };
   int h = alert_sizes[alert.size];
@@ -177,10 +179,14 @@ void OnroadAlerts::paintEvent(QPaintEvent *event) {
     configFont(p, "Open Sans", 74, "SemiBold");
     p.drawText(r, Qt::AlignCenter, alert.text1);
   } else if (alert.size == cereal::ControlsState::AlertSize::MID) {
-    configFont(p, "Open Sans", 88, "Bold");
-    p.drawText(QRect(0, c.y() - 125, width(), 150), Qt::AlignHCenter | Qt::AlignTop, alert.text1);
+    configFont(p, "Open Sans", 74, "Bold");
+    p.drawText(QRect(0, c.y() - 80, width(), 80), Qt::AlignHCenter | Qt::AlignTop, alert.text1);
     configFont(p, "Open Sans", 66, "Regular");
-    p.drawText(QRect(0, c.y() + 21, width(), 90), Qt::AlignHCenter, alert.text2);
+    p.drawText(QRect(0, c.y() + 20, width(), 70), Qt::AlignHCenter, alert.text2);
+    // configFont(p, "Open Sans", 88, "Bold");
+    // p.drawText(QRect(0, c.y() - 125, width(), 150), Qt::AlignHCenter | Qt::AlignTop, alert.text1);
+    // configFont(p, "Open Sans", 66, "Regular");
+    // p.drawText(QRect(0, c.y() + 21, width(), 90), Qt::AlignHCenter, alert.text2);
   } else if (alert.size == cereal::ControlsState::AlertSize::FULL) {
     bool l = alert.text1.length() > 15;
     configFont(p, "Open Sans", l ? 132 : 177, "Bold");
