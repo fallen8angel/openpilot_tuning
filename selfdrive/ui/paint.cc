@@ -409,33 +409,33 @@ static void ui_draw_debug(UIState *s) {
 
     ui_print(s, ui_viz_rx, ui_viz_ry+360, "AD:%.2f", scene.steer_actuator_delay);
     ui_print(s, ui_viz_rx, ui_viz_ry+400, "OS:%.2f", abs(scene.output_scale));
-    ui_print(s, ui_viz_rx, ui_viz_ry+440, "%.2f|%.2f", scene.lateralPlan.lProb, scene.lateralPlan.rProb);
-    ui_print(s, ui_viz_rx, ui_viz_ry+480, "%.1f/%.1fm", scene.lateralPlan.dProb, scene.lateralPlan.laneWidth); // High dProb is more related to LaneLine, Low is Laneless
-    ui_print(s, ui_viz_rx, ui_viz_ry+520, "%.1f/%.1f/%.1f/%.1f/%.1f/%.1f", std::clamp<float>(1.0 - scene.road_edge_stds[0], 0.0, 1.0), scene.lane_line_probs[0], scene.lane_line_probs[1], scene.lane_line_probs[2], scene.lane_line_probs[3], std::clamp<float>(1.0 - scene.road_edge_stds[1], 0.0, 1.0));
+    ui_print(s, ui_viz_rx, ui_viz_ry+480, "%.2f|%.2f", scene.lateralPlan.lProb, scene.lateralPlan.rProb);
+    ui_print(s, ui_viz_rx, ui_viz_ry+520, "%.1f/%.1fm", scene.lateralPlan.dProb, scene.lateralPlan.laneWidth); // High dProb is more related to LaneLine, Low is Laneless
+    ui_print(s, ui_viz_rx, ui_viz_ry+560, "%.1f/%.1f/%.1f/%.1f/%.1f/%.1f", std::clamp<float>(1.0 - scene.road_edge_stds[0], 0.0, 1.0), scene.lane_line_probs[0], scene.lane_line_probs[1], scene.lane_line_probs[2], scene.lane_line_probs[3], std::clamp<float>(1.0 - scene.road_edge_stds[1], 0.0, 1.0));
     // const std::string stateStrings[] = {"disabled", "preEnabled", "enabled", "softDisabling"};
     // ui_print(s, ui_viz_rx, ui_viz_ry+520, "%s", stateStrings[(int)(*s->sm)["controlsState"].getControlsState().getState()].c_str());
     //ui_print(s, ui_viz_rx, ui_viz_ry+800, "A:%.5f", scene.accel_sensor2);
     if (!scene.nDebugUi3) {
-      if (scene.map_is_running) {
-        if (scene.liveNaviData.opkrroadsign) ui_print(s, ui_viz_rx, ui_viz_ry+560, "RS:%d", scene.liveNaviData.opkrroadsign);
-        if (scene.liveNaviData.opkrspeedsign) ui_print(s, ui_viz_rx, ui_viz_ry+600, "CS:%d", scene.liveNaviData.opkrspeedsign);
-        if (scene.liveNaviData.opkrspeedlimit) ui_print(s, ui_viz_rx, ui_viz_ry+640, "SL:%d", scene.liveNaviData.opkrspeedlimit);
-        if (scene.liveNaviData.opkrspeedlimitdist) ui_print(s, ui_viz_rx, ui_viz_ry+680, "DS:%.0f", scene.liveNaviData.opkrspeedlimitdist);
-        if (scene.liveNaviData.opkrturninfo) ui_print(s, ui_viz_rx, ui_viz_ry+720, "TI:%d", scene.liveNaviData.opkrturninfo);
-        if (scene.liveNaviData.opkrdisttoturn) ui_print(s, ui_viz_rx, ui_viz_ry+760, "DT:%.0f", scene.liveNaviData.opkrdisttoturn);
-      } else if (!scene.map_is_running && (*s->sm)["carState"].getCarState().getSafetySign() > 19) {
-        ui_print(s, ui_viz_rx, ui_viz_ry+560, "SL:%.0f", (*s->sm)["carState"].getCarState().getSafetySign());
-        ui_print(s, ui_viz_rx, ui_viz_ry+600, "DS:%.0f", (*s->sm)["carState"].getCarState().getSafetyDist());
+      if (scene.map_is_running && !scene.osm_enabled) {
+        if (scene.liveNaviData.opkrspeedsign) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+240, "CS:%d", scene.liveNaviData.opkrspeedsign);
+        if (scene.liveNaviData.opkrspeedlimit) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+280, "SL:%d", scene.liveNaviData.opkrspeedlimit);
+        if (scene.liveNaviData.opkrspeedlimitdist) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+320, "DS:%.0f", scene.liveNaviData.opkrspeedlimitdist);
+        if (scene.liveNaviData.opkrturninfo) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+360, "TI:%d", scene.liveNaviData.opkrturninfo);
+        if (scene.liveNaviData.opkrdisttoturn) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+400, "DT:%.0f", scene.liveNaviData.opkrdisttoturn);
+        if (scene.liveNaviData.opkrroadsign) ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+440, "RS:%d", scene.liveNaviData.opkrroadsign);
+      } else if (!scene.map_is_running && !scene.osm_enabled && (*s->sm)["carState"].getCarState().getSafetySign() > 19) {
+        ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+280, "SL:%.0f", (*s->sm)["carState"].getCarState().getSafetySign());
+        ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+320, "DS:%.0f", (*s->sm)["carState"].getCarState().getSafetyDist());
       } 
-      if (!scene.map_is_running && scene.osm_enabled) {
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+240, "SL:%.0f", scene.liveMapData.ospeedLimit);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+280, "SLA:%.0f", scene.liveMapData.ospeedLimitAhead);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+320, "SLAD:%.0f", scene.liveMapData.ospeedLimitAheadDistance);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+360, "TSL:%.0f", scene.liveMapData.oturnSpeedLimit);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+400, "TSLED:%.0f", scene.liveMapData.oturnSpeedLimitEndDistance);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+440, "TSLS:%d", scene.liveMapData.oturnSpeedLimitSign);
-      ui_print(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+480, "TCO:%.2f", -scene.lateralPlan.totalCameraOffset);
-      ui_draw_text(s, ui_viz_rx+(scene.mapbox_running ? 150:200), ui_viz_ry+520, scene.liveMapData.ocurrentRoadName.c_str(), 34, COLOR_WHITE_ALPHA(125), "KaiGenGothicKR-Medium");
+      if (!scene.map_is_running && scene.osm_enabled && !scene.nDebugUi1) {
+      ui_draw_text(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+600, scene.liveMapData.ocurrentRoadName.c_str(), 34, COLOR_WHITE_ALPHA(125), "KaiGenGothicKR-Medium");
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+640, "SL:%.0f", scene.liveMapData.ospeedLimit);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+680, "SLA:%.0f", scene.liveMapData.ospeedLimitAhead);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+720, "SLAD:%.0f", scene.liveMapData.ospeedLimitAheadDistance);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+760, "TSL:%.0f", scene.liveMapData.oturnSpeedLimit);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+800, "TSLED:%.0f", scene.liveMapData.oturnSpeedLimitEndDistance);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+840, "TSLS:%d", scene.liveMapData.oturnSpeedLimitSign);
+      ui_print(s, ui_viz_rx-(scene.mapbox_running ? 50:0), ui_viz_ry+880, "TCO:%.2f", -scene.lateralPlan.totalCameraOffset);
       }
     }
   }  
@@ -503,7 +503,6 @@ static void ui_draw_debug(UIState *s) {
     ui_print(s, ui_viz_rx_center, 540, "BF:%.1f   RL:%.1f°", scene.accel_prob[0], scene.accel_prob[1]);
   }
 }
-
 
 /*
   park @1;

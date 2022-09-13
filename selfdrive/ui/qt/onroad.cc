@@ -176,13 +176,13 @@ void OnroadAlerts::paintEvent(QPaintEvent *event) {
   p.setPen(QColor(0xff, 0xff, 0xff));
   p.setRenderHint(QPainter::TextAntialiasing);
   if (alert.size == cereal::ControlsState::AlertSize::SMALL) {
-    configFont(p, "Open Sans", 74, "SemiBold");
+    configFont(p, "Open Sans", 75, "SemiBold");
     p.drawText(r, Qt::AlignCenter, alert.text1);
   } else if (alert.size == cereal::ControlsState::AlertSize::MID) {
-    configFont(p, "Open Sans", 74, "Bold");
+    configFont(p, "Open Sans", 75, "Bold");
     p.drawText(QRect(0, c.y() - 80, width(), 80), Qt::AlignHCenter | Qt::AlignTop, alert.text1);
-    configFont(p, "Open Sans", 66, "Regular");
-    p.drawText(QRect(0, c.y() + 20, width(), 70), Qt::AlignHCenter, alert.text2);
+    configFont(p, "Open Sans", 65, "Regular");
+    p.drawText(QRect(0, c.y() + 10, width(), 70), Qt::AlignHCenter, alert.text2);
     // configFont(p, "Open Sans", 88, "Bold");
     // p.drawText(QRect(0, c.y() - 125, width(), 150), Qt::AlignHCenter | Qt::AlignTop, alert.text1);
     // configFont(p, "Open Sans", 66, "Regular");
