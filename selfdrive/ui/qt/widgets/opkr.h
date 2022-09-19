@@ -2596,3 +2596,17 @@ private:
   
   void refresh();
 };
+
+class ExternalDeviceIP : public AbstractControl {
+  Q_OBJECT
+
+public:
+  ExternalDeviceIP();
+
+private:
+  QPushButton btn;
+  QLabel label;
+  Params params;
+  
+  void refresh();
+};

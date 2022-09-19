@@ -1744,7 +1744,7 @@ struct LiveParametersData {
 
 struct LiveNaviData {
   speedLimit @0 :Int32;
-  speedLimitDistance @1 :Float32;
+  safetyDistance @1 :Float32;
   safetySign @2 :Int32;
   safetySignCam @3 :Int32;
   roadCurvature @4 :Float32;
@@ -1754,6 +1754,15 @@ struct LiveNaviData {
 
   mapValid @8 :Bool;
   mapEnable @9 :Int32;
+}
+
+struct LiveENaviData {
+  speedLimit @0 :Int32;
+  safetyDistance @1 :Float32;
+  safetySign @2 :Int32;
+  turnInfo @3 :Int32;
+  distanceToTurn @4 :Float32;
+  safetySignCam @5 :Int32;
 }
 
 struct LiveMapDataDEPRECATED {
@@ -1953,6 +1962,7 @@ struct Event {
     # OPKR Navi
     liveNaviData @91 :LiveNaviData;
     liveMapData @92: LiveMapData;
+    liveENaviData @93: LiveENaviData;
 
     # navigation
     navInstruction @82 :NavInstruction;
