@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import numpy as np
 import cereal.messaging as messaging
 from common.params import Params
@@ -15,13 +16,18 @@ class ENavi():
     self.turn_info = 0
     self.turn_distance = 0
 
-    self.ip_add = Params().get("ExternalDeviceIP", encoding="utf8")
+    self.ip_add = list(map(str, Params().get("ExternalDeviceIP", encoding="utf8").split(',')))
+    self.ip_add_num = int(len(self.ip_add))
+  
+    self.check_connection = False
+    self.check_timer = 0
 
   def navi_data(self):
+
     context = zmq.Context()
     socket = context.socket(zmq.SUB)
     try:
-      socket.connect("tcp://" + str(self.ip_add) + ":5555")
+      socket.connect("tcp://" + str(self.ip_add[0]) + ":5555")
     except:
       socket.connect("tcp://127.0.0.1:5555")
       pass
@@ -31,6 +37,13 @@ class ENavi():
     if "opkrspdlimit" in message:
       arr = message.split(': ')
       self.spd_limit = arr[1]
+      self.check_connection = True
+    else:
+      self.check_timer += 1
+      if self.check_timer > 3:
+        self.check_timer = 0
+        self.check_connection = False
+
     if "opkrspddist" in message:
       arr = message.split(': ')
       self.safety_distance = arr[1]
@@ -54,6 +67,7 @@ class ENavi():
     navi_msg.liveENaviData.safetySign = int(self.sign_type)
     navi_msg.liveENaviData.turnInfo = int(self.turn_info)
     navi_msg.liveENaviData.distanceToTurn = float(self.turn_distance)
+    navi_msg.liveENaviData.connectionAlive = bool(self.check_connection)
     pm.send('liveENaviData', navi_msg)
 
 def navid_thread(pm=None):

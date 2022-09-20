@@ -17,7 +17,7 @@ LaneChangeState = log.LateralPlan.LaneChangeState
 class NaviControl():
   def __init__(self):
 
-    self.sm = messaging.SubMaster(['liveNaviData', 'liveENaviData', 'lateralPlan', 'radarState', 'controlsState', 'liveMapData', 'modelV2'])
+    self.sm = messaging.SubMaster(['liveNaviData', 'liveENaviData', 'lateralPlan', 'radarState', 'controlsState', 'liveMapData'])
 
     self.btn_cnt = 0
     self.seq_command = 0
@@ -238,12 +238,14 @@ class NaviControl():
       # elif CS.map_enabled and self.liveNaviData.speedLimit > 19 and self.liveNaviData.safetySignCam not in (4, 7, 16):  # navi app speedlimit
       elif self.decel_on_speedbump and (CS.map_enabled or self.navi_sel == 3) and ((self.liveNaviData.safetySign == 107 and self.navi_sel == 0) \
        or (self.liveNaviData.safetySignCam == 124 and self.navi_sel == 1) or (self.liveNaviData.safetySign == 22 and self.navi_sel == 3)):
-        cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
-        sb_consider_speed = interp((v_ego_kph - 30), [0, 50], [1, 2.5])
+        sb_consider_speed = interp((v_ego_kph - (20 if CS.is_set_speed_in_mph else 30)), [0, 50], [1., 2.])
         sb_final_decel_start_dist = sb_consider_speed*v_ego_kph
-        if self.liveNaviData.safetyDistance < sb_final_decel_start_dist and self.navi_sel == 3:
+        if self.liveNaviData.safetyDistance < sb_final_decel_start_dist and self.navi_sel == 3: # TMap can use safetyDistance
+          cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
           self.onSpeedBumpControl = True
-        elif self.navi_sel in (0,1):
+        elif self.navi_sel in (0,1): # iNavi & Mappy 
+          # cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
+          cruise_set_speed_kph = interp(v_ego_kph, [35, 40, 60, 80, 100], [30, 35, 45, 60, 80]) # Hoya
           self.onSpeedBumpControl = True
       elif (CS.map_enabled or self.navi_sel == 3) and self.liveNaviData.speedLimit > 21 and self.liveNaviData.safetySignCam not in (4, 7, 16):  # navi app speedlimit
         self.onSpeedBumpControl = False
@@ -352,7 +354,7 @@ class NaviControl():
     var_speed = navi_speed
     self.lead_0 = self.sm['radarState'].leadOne
     self.lead_1 = self.sm['radarState'].leadTwo
-    self.leadv3 = self.sm['modelV2'].leadsV3
+    #self.leadv3 = self.sm['modelV2'].leadsV3
 
     self.cut_in = True if self.lead_1.status and (self.lead_0.dRel - self.lead_1.dRel) > 2.0 else False
     #cut_in_model = True if self.leadv3[1].prob > 0.5 and abs(self.leadv3[1].x[0] - self.leadv3[0].x[0]) > 3.0 else False

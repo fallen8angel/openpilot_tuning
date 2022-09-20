@@ -1763,6 +1763,7 @@ struct LiveENaviData {
   turnInfo @3 :Int32;
   distanceToTurn @4 :Float32;
   safetySignCam @5 :Int32;
+  connectionAlive @6 :Bool;
 }
 
 struct LiveMapDataDEPRECATED {
