@@ -16,46 +16,55 @@ class ENavi():
     self.turn_info = 0
     self.turn_distance = 0
 
-    self.ip_add = list(map(str, Params().get("ExternalDeviceIP", encoding="utf8").split(',')))
-    self.ip_add_num = int(len(self.ip_add))
+    self.ip_add = ""
+    self.ip_bind = False
+    self.ip_check_timer = 0
   
     self.check_connection = False
     self.check_timer = 0
 
+  def bind_ip(self):
+    if not self.ip_bind:
+      self.ip_check_timer += 1
+      if self.ip_check_timer > 5:
+        self.ip_add = Params().get("ExternalDeviceIPNow", encoding="utf8")
+        if self.ip_add is not None:
+          self.ip_bind = True
+
   def navi_data(self):
+    if self.ip_bind:
+      context = zmq.Context()
+      socket = context.socket(zmq.SUB)
+      try:
+        socket.connect("tcp://" + str(self.ip_add) + ":5555")
+      except:
+        socket.connect("tcp://127.0.0.1:5555")
+        pass
+      socket.subscribe("")
+      message = str(socket.recv(), 'utf-8')
 
-    context = zmq.Context()
-    socket = context.socket(zmq.SUB)
-    try:
-      socket.connect("tcp://" + str(self.ip_add[0]) + ":5555")
-    except:
-      socket.connect("tcp://127.0.0.1:5555")
-      pass
-    socket.subscribe("")
-    message = str(socket.recv(), 'utf-8')
+      if "opkrspdlimit" in message:
+        arr = message.split(': ')
+        self.spd_limit = arr[1]
+        self.check_connection = True
+      else:
+        self.check_timer += 1
+        if self.check_timer > 3:
+          self.check_timer = 0
+          self.check_connection = False
 
-    if "opkrspdlimit" in message:
-      arr = message.split(': ')
-      self.spd_limit = arr[1]
-      self.check_connection = True
-    else:
-      self.check_timer += 1
-      if self.check_timer > 3:
-        self.check_timer = 0
-        self.check_connection = False
-
-    if "opkrspddist" in message:
-      arr = message.split(': ')
-      self.safety_distance = arr[1]
-    if "opkrsigntype" in message:
-      arr = message.split(': ')
-      self.sign_type = arr[1]
-    if "opkrturninfo" in message:
-      arr = message.split(': ')
-      self.turn_info = arr[1]
-    if "opkrdistancetoturn" in message:
-      arr = message.split(': ')
-      self.turn_distance = arr[1]
+      if "opkrspddist" in message:
+        arr = message.split(': ')
+        self.safety_distance = arr[1]
+      if "opkrsigntype" in message:
+        arr = message.split(': ')
+        self.sign_type = arr[1]
+      if "opkrturninfo" in message:
+        arr = message.split(': ')
+        self.turn_info = arr[1]
+      if "opkrdistancetoturn" in message:
+        arr = message.split(': ')
+        self.turn_distance = arr[1]
 
   def publish(self, pm):
     if self.navi_selection != 3:
@@ -77,6 +86,7 @@ def navid_thread(pm=None):
     pm = messaging.PubMaster(['liveENaviData'])
 
   while True:
+    navid.bind_ip()
     navid.navi_data()
     navid.publish(pm)
 

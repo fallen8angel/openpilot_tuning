@@ -491,6 +491,15 @@ static void update_status(UIState *s) {
     }
   }
 
+  if (!s->scene.run_ext_navi && (s->sm->frame - s->scene.started_frame > 25*UI_FREQ)) {
+    if (s->scene.navi_select == 3) {
+      s->scene.run_ext_navi = true;
+      system("/data/openpilot/selfdrive/assets/addon/script/find_ip.sh &");
+    } else if (s->sm->frame - s->scene.started_frame > 30*UI_FREQ) {
+      s->scene.run_ext_navi = true;
+    }
+  }
+
   if (!s->scene.read_params_once) {
     // user param value init
     s->scene.end_to_end = params.getBool("EndToEndToggle");
