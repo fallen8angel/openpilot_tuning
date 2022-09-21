@@ -20,4 +20,3 @@ for NUM in "${!array[@]}"; do
     fi
   fi
 done;
-echo -n 127.0.0.1 > /data/params/d/ExternalDeviceIPNow

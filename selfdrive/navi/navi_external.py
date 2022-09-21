@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-import os
-import numpy as np
 import cereal.messaging as messaging
 from common.params import Params
 
 import zmq
 
 # OPKR, this is for getting navi data from external device.
+# 20Hz
 class ENavi():
   def __init__(self):
     self.navi_selection = int(Params().get("OPKRNaviSelect", encoding="utf8"))
@@ -26,13 +25,20 @@ class ENavi():
   def bind_ip(self):
     if not self.ip_bind:
       self.ip_check_timer += 1
-      if self.ip_check_timer > 5:
+      if self.ip_check_timer > 25:
+        self.ip_check_timer = 0
         self.ip_add = Params().get("ExternalDeviceIPNow", encoding="utf8")
         if self.ip_add is not None:
           self.ip_bind = True
 
   def navi_data(self):
     if self.ip_bind:
+      self.spd_limit = 0
+      self.safety_distance = 0
+      self.sign_type = 0
+      self.turn_info = 0
+      self.turn_distance = 0
+
       context = zmq.Context()
       socket = context.socket(zmq.SUB)
       try:
@@ -41,30 +47,31 @@ class ENavi():
         socket.connect("tcp://127.0.0.1:5555")
         pass
       socket.subscribe("")
+
       message = str(socket.recv(), 'utf-8')
 
-      if "opkrspdlimit" in message:
-        arr = message.split(': ')
-        self.spd_limit = arr[1]
-        self.check_connection = True
-      else:
-        self.check_timer += 1
-        if self.check_timer > 3:
-          self.check_timer = 0
-          self.check_connection = False
-
-      if "opkrspddist" in message:
-        arr = message.split(': ')
-        self.safety_distance = arr[1]
-      if "opkrsigntype" in message:
-        arr = message.split(': ')
-        self.sign_type = arr[1]
-      if "opkrturninfo" in message:
-        arr = message.split(': ')
-        self.turn_info = arr[1]
-      if "opkrdistancetoturn" in message:
-        arr = message.split(': ')
-        self.turn_distance = arr[1]
+      for line in message.split('\n'):
+        if "opkrspdlimit" in line:
+          arr = line.split('opkrspdlimit: ')
+          self.spd_limit = arr[1]
+          self.check_connection = True
+        else:
+          self.check_timer += 1
+          if self.check_timer > 25:
+            self.check_timer = 0
+            self.check_connection = False
+        if "opkrspddist" in line:
+          arr = line.split('opkrspddist: ')
+          self.safety_distance = arr[1]
+        if "opkrsigntype" in line:
+          arr = line.split('opkrsigntype: ')
+          self.sign_type = arr[1]
+        if "opkrturninfo" in line:
+          arr = line.split('opkrturninfo: ')
+          self.turn_info = arr[1]
+        if "opkrdistancetoturn" in line:
+          arr = line.split('opkrdistancetoturn: ')
+          self.turn_distance = arr[1]
 
   def publish(self, pm):
     if self.navi_selection != 3:

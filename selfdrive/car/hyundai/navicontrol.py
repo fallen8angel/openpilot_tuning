@@ -232,18 +232,14 @@ class NaviControl():
               self.onSpeedControl = True
             else:
               self.onSpeedControl = False
-      # elif self.decel_on_speedbump and CS.map_enabled and ((self.liveNaviData.safetySign == 107 and self.navi_sel == 0) or (self.liveNaviData.safetySignCam == 124 and self.navi_sel == 1)): # Hoya
-      #   cruise_set_speed_kph = interp(v_ego_kph, [35, 40, 60, 80, 100], [30, 35, 45, 60, 80])
-      #   self.onSpeedBumpControl = True
-      # elif CS.map_enabled and self.liveNaviData.speedLimit > 19 and self.liveNaviData.safetySignCam not in (4, 7, 16):  # navi app speedlimit
       elif self.decel_on_speedbump and (CS.map_enabled or self.navi_sel == 3) and ((self.liveNaviData.safetySign == 107 and self.navi_sel == 0) \
        or (self.liveNaviData.safetySignCam == 124 and self.navi_sel == 1) or (self.liveNaviData.safetySign == 22 and self.navi_sel == 3)):
-        sb_consider_speed = interp((v_ego_kph - (20 if CS.is_set_speed_in_mph else 30)), [0, 50], [1., 2.])
+        sb_consider_speed = interp((v_ego_kph - (20 if CS.is_set_speed_in_mph else 30)), [0, 50], [1., 1.8])
         sb_final_decel_start_dist = sb_consider_speed*v_ego_kph
         if self.liveNaviData.safetyDistance < sb_final_decel_start_dist and self.navi_sel == 3: # TMap can use safetyDistance
           cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
           self.onSpeedBumpControl = True
-        elif self.navi_sel in (0,1): # iNavi & Mappy 
+        elif self.navi_sel in (0,1):
           # cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
           cruise_set_speed_kph = interp(v_ego_kph, [35, 40, 60, 80, 100], [30, 35, 45, 60, 80]) # Hoya
           self.onSpeedBumpControl = True
