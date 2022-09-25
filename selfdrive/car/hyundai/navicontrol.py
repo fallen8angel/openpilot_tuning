@@ -241,7 +241,7 @@ class NaviControl():
           self.onSpeedBumpControl = True
         elif self.navi_sel in (0,1):
           # cruise_set_speed_kph == 20 if CS.is_set_speed_in_mph else 30
-          cruise_set_speed_kph = interp(v_ego_kph, [35, 40, 60, 80, 100], [30, 35, 45, 60, 80]) # Hoya
+          cruise_set_speed_kph = interp(v_ego_kph, [35, 40, 60, 80], [30, 35, 45, 60]) # Hoya
           self.onSpeedBumpControl = True
         else:
           self.onSpeedBumpControl = False
