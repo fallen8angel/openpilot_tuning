@@ -175,6 +175,11 @@ class NaviControl():
     #if not mapValid or trafficType == 0:
     #  return  cruise_set_speed_kph
 
+    #test cruise_set_speed_kph set to 30 when stopline & stop sign
+    # if 0 < self.sm['longitudinalPlan'].e2eX[12] < 100 and self.sm['longitudinalPlan'].stopLine[12] < 100 :
+    #   cruise_set_speed_kph = 30
+    #   return cruise_set_speed_kph
+
     if not self.speedlimit_decel_off:
       if self.osm_speedlimit_enabled and not self.sm['controlsState'].osmOffSpdLimit:  # osm speedlimit
         if self.sm['liveMapData'].speedLimit > 21 or self.sm['liveMapData'].speedLimitAhead > 21:
