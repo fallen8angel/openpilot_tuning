@@ -165,10 +165,10 @@ class LateralPlanner:
                      y_pts,
                      heading_pts,
                      curv_rate_pts)
-    # init state for next
-    # mpc.u_sol is the desired curvature rate given x0 curv state.
-    # with x0[3] = measured_curvature, this would be the actual desired rate.
-    # instead, interpolate x_sol so that x0[3] is the desired curvature for lat_control.
+    # init state for next iteration
+    # mpc.u_sol is the desired second derivative of psi given x0 curv state.
+    # with x0[3] = measured_yaw_rate, this would be the actual desired yaw rate.
+    # instead, interpolate x_sol so that x0[3] is the desired yaw rate for lat_control.
     self.x0[3] = interp(DT_MDL, self.t_idxs[:LAT_MPC_N + 1], self.lat_mpc.x_sol[:, 3])
 
     #  Check for infeasible MPC solution
@@ -196,8 +196,11 @@ class LateralPlanner:
     lateralPlan.laneWidth = float(self.LP.lane_width)
     lateralPlan.dPathPoints = self.y_pts.tolist()
     lateralPlan.psis = self.lat_mpc.x_sol[0:CONTROL_N, 2].tolist()
-    lateralPlan.curvatures = self.lat_mpc.x_sol[0:CONTROL_N, 3].tolist()
-    lateralPlan.curvatureRates = [float(x) for x in self.lat_mpc.u_sol[0:CONTROL_N - 1]] + [0.0]
+
+    # clip speed for curv calculation at 1m/s, to prevent low speed extremes
+    clipped_speed = max(1.0, sm['carState'].vEgo)
+    lateralPlan.curvatures = (self.lat_mpc.x_sol[0:CONTROL_N, 3]/clipped_speed).tolist()
+    lateralPlan.curvatureRates = [float(x/clipped_speed) for x in self.lat_mpc.u_sol[0:CONTROL_N - 1]] + [0.0]
     lateralPlan.lProb = float(self.LP.lll_prob)
     lateralPlan.rProb = float(self.LP.rll_prob)
     lateralPlan.dProb = float(self.LP.d_prob)
