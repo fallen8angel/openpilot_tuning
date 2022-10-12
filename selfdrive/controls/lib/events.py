@@ -672,7 +672,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
   },
 
   EventName.pedalPressed: {
-    ET.USER_DISABLE: EngagementAlert(AudibleAlert.none),
+    ET.USER_DISABLE: EngagementAlert(AudibleAlert.disengage),
     ET.NO_ENTRY: NoEntryAlert(tr(90),
                               visual_alert=VisualAlert.brakePressed),
   },
@@ -729,7 +729,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
       tr(98),
       "",
       AlertStatus.normal, AlertSize.small,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, .5),
+      Priority.LOW, VisualAlert.none, AudibleAlert.engage, .5),
   },
 
   EventName.curvSpeedDown: {
@@ -745,7 +745,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
       tr(100),
       "",
       AlertStatus.normal, AlertSize.small,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, .5),
+      Priority.LOW, VisualAlert.none, AudibleAlert.prompt, .5),
   },
 
   EventName.outOfSpace: {
